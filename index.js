@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
 const User = require('./models/schemas/users');
-const Results = require('./models/schemas/results');
+const Results = require('./models/schemas/quiz');
 
 require('dotenv').config();
 const cors = require('cors');
