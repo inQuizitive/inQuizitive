@@ -3,9 +3,7 @@ const mongoose = require("mongoose");
 const User = require("./users");
 //schema used to save data for uses that have attempted a quiz
 
-const Results = new mongoose.Schema({
-    //need to link to a user id that has taken the quiz
-
+const Result = new mongoose.Schema({
     quizUser: {type: mongoose.Schema.Types.ObjectId, ref: User, required: true},
     score: {type: Number, required: true},
     category: {type: String, required: true},
@@ -13,4 +11,4 @@ const Results = new mongoose.Schema({
     quizDateTime: {type: Date, required: true},
 })
 
-module.exports = mongoose.model("QuizResults", Results);
+module.exports = mongoose.model("QuizResults", Result);
