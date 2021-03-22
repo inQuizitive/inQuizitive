@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bootstrap": "npm install --include=dev && cd frontend && npm install --include=dev"
+    "bootstrap": "npm install --include=dev && cd frontend && npm install --include=dev",
+    "backend": "nodemon index.js",
+    "frontend": "npm start --prefix frontend"
   },
   "repository": {
     "type": "git",
