@@ -13,8 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect(`mongodb+srv://${process.env.mongoUsername}:${process.env.mongoPassword}
-@cluster0.7bypk.mongodb.net/${process.env.MongoDB}?retryWrites=true&w=majority`,
+mongoose.connect(`mongodb+srv://${process.env.mongoUsername}:${process.env.mongoPassword}@cluster0.7bypk.mongodb.net/${process.env.MongoDB}?retryWrites=true&w=majority`,
 {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -28,4 +27,5 @@ connection.once('open', function() {
 
 app.listen(5000, () => {
     console.log('Online');
+    console.log('mongodb+srv://${process.env.mongoUsername}:${process.env.mongoPassword}@cluster0.7bypk.mongodb.net/${process.env.MongoDB}?retryWrites=true&w=majority')
 });
