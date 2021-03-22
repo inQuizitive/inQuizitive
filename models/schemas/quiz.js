@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
-
 const User = require("./users");
-//schema used to save data for uses that have attempted a quiz
 
+//schema used to save data for uses that have attempted a quiz
 const Result = new mongoose.Schema({
     quizUser: {type: mongoose.Schema.Types.ObjectId, ref: User, required: true},
     score: {type: Number, required: true},
