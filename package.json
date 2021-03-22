@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "bootstrap": "npm install --include=dev && cd frontend && npm install --include=dev",
     "backend": "nodemon index.js",
-    "frontend": "npm start --prefix frontend"
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.12.1",
     "nodemon": "^2.0.7"
   },
   "devDependencies": {
