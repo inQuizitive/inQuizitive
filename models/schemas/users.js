@@ -13,6 +13,7 @@ User.statics.checkExists = async function (email) {
 
 User.statics.checkPassword = async function (email, password) {
   const user = await this.findOne({ email: email });
+
   if (!user) {
     return false;
   }
