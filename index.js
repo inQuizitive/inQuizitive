@@ -24,7 +24,9 @@ connection.once('open', function() {
     console.log("MongoDB database connection working");
 });
 
+app.use('/users', userRouter);
+app.use('/results', resultsRouter);
+
 app.listen(5000, () => {
     console.log('Online');
-    console.log('mongodb+srv://${process.env.mongoUsername}:${process.env.mongoPassword}@cluster0.7bypk.mongodb.net/${process.env.MongoDB}?retryWrites=true&w=majority')
 });
