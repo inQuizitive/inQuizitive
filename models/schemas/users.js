@@ -7,12 +7,12 @@ const User = new mongoose.Schema({
   password: { type: String, required: true },
 });
 
-users.statics.checkExists = async function (email) {
-  return await this.exists({ emailAddress: email });
+User.statics.checkExists = async function (email) {
+  return await this.exists({ email: email });
 };
 
-users.statics.checkPassword = async function (email, password) {
-  const user = await this.findOne({ emailAddress: email });
+User.statics.checkPassword = async function (email, password) {
+  const user = await this.findOne({ email: email });
   if (!user) {
     return false;
   }
