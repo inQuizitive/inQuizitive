@@ -2,13 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
-const User = require('./models/schemas/users');
-const Results = require('./models/schemas/quiz');
-
 require('dotenv').config();
 const cors = require('cors');
 
-// Please explain Neil 
+const resultsRouter = require("./routes/resultsRouter.js");
+const userRouter = require("./routes/userRouter");
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
