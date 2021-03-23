@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Users = require('../models/schemas/users');
 // const Results = require('../models/schemas/results');
+const bcrypt = require('bcrypt')
 
 router.get('/', (req, res) => {
     Users.find({}, (err, users) => {
@@ -14,7 +15,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.post('/new-account', async (req, res) => {
+router.post('/', async (req, res) => {
     if (req.body.password !== req.body.passwordCheck) {
         return res.status(400).json({ status: 'Error', err: 'The passwords do NOT match' })
     }
@@ -92,3 +93,5 @@ router.post("/login", async (req, res) => {
       }
     });
   })
+
+  module.exports = router;
