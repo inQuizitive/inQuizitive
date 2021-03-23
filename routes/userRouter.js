@@ -4,6 +4,7 @@ const Users = require('../models/schemas/users');
 // const Results = require('../models/schemas/results');
 const bcrypt = require('bcrypt')
 
+// get method for user 
 router.get('/', (req, res) => {
     Users.find({}, (err, users) => {
         if (err) {
