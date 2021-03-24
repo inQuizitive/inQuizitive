@@ -57,7 +57,7 @@ function Question(props) {
                         key = {answerID}
                         onClick = {clickAnswer}
                         value = {answer}
-                    > ✨ {answer} ✨
+                    >  {answer} 
                     </button> 
                 ))}
             </div>
