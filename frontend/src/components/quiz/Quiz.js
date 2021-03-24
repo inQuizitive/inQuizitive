@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import Swal from 'sweetalert2';
 
-// import Question from "./Question";
-// import GameOver from "./GameOver";
-// import QuizSelection from "./QuizSelection";
+import Question from "./Question";
+import GameOver from "./GameOver";
+import QuizSelection from "./QuizSelection";
 
 function Quiz() {
   const [questions, setQuestions] = useState([]);  //array is empty as populated by the getQuestions function via the data variable
@@ -66,16 +66,8 @@ function Quiz() {
   const playGame = () => {
     if (index === 10) {
         alert('you made it');
-    //     Swal.fire({
-    //     title: "How quizzical did you get?! Your total score is: " + points,
-    //     imageUrl: 'https://i.gifer.com/685r.gif',
-    //     imageWidth: 400,
-    //     imageHeight: 300,
-    //     imageAlt: 'Olivia Newton John looking through legs',
-    //     confirmButtonColor: '#C4F43C'
-    //   });
-      setQuizStarted(false)
-      setQuizEnded(true);
+        setQuizStarted(false)
+        setQuizEnded(true);
       return;
     }
 
@@ -101,8 +93,7 @@ function Quiz() {
   return (
     <div className="quizWrapper">
       {(quizEnded) ? <GameOver 
-            points={points} 
-            type = {type} 
+            points={points}  
             difficulty = {difficulty}
             category = {category}
             setQuizStarted = {setQuizStarted}
@@ -119,11 +110,9 @@ function Quiz() {
                 setDifficulty = {setDifficulty}
                 category = {category}
                 setCategory = {setCategory}
-                type = {type}
-                setType = {setType}
               />
               <button id="startQuiz" value="startQuiz" onClick={startQuiz}>
-                Ready? Let's get quizzical!
+                Be inQuizitive!!
               </button>
            </div>
           } 
