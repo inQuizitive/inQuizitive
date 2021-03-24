@@ -40,7 +40,7 @@ return (
     <div className="game-over-container">
         <span className="neon-text">Game Over!</span>
         <div className="restart-quiz-container">
-            <button id="restartQuiz" value="restartQuiz" onClick={restartQuiz}>Play another round?</button>
+            <button id="restartQuiz" value="restartQuiz" onClick={restartQuiz}>Next inQuizitive Round</button>
         </div>
     </div>
 )
