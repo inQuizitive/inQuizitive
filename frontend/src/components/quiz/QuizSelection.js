@@ -28,7 +28,7 @@ function QuizSelection(props) {
                 console.log(props.type)
               }}
             >
-              <option value="boolean">True/False</option>
+              {/* <option value="boolean">True/False</option> */}
               <option value="multiple">Multiple Choice</option>
             </select>
           </th>

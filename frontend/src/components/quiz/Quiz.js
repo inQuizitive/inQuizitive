@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import "./Quiz.css";
+import "./Quiz.css";
 import axios from "axios";
-// import Swal from 'sweetalert2';
-
 import Question from "./Question";
 import GameOver from "./GameOver";
 import QuizSelection from "./QuizSelection";
