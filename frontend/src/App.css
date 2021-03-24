@@ -1,1 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Englebert&display=swap');
+
+
+:root {
+    --logoRed: #EC4C4C;
+    --logoYellow: #F8FC74;
+    --logoBlue: #8DCAFF;
+    --logoBlack: #000000;
+    --logoWhite: #ffffff;
+    /*? to use these colours you would say "background-color: var(--logoRed);" */
+}
