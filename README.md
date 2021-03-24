@@ -27,3 +27,10 @@ explain that they can create a profile and use the app. -->
 
 #### Setting Up a Database
 <!-- add some information about how to set up a datbase to connect to the app. -->
+
+#### inQuizitive's GitHub Statistics
+![inQuizitive's GitHub Statistics!](https://github-readme-stats.vercel.app/api?username=inQuizitive&show_icons=true&theme=tokyonight)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=inQuizitive&theme=tokyonight)
+
+#### Visitor Count
+![Visitor Count!](https://profile-counter.glitch.me/inQuizitive/count.svg)
