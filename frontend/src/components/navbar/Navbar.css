@@ -12,6 +12,7 @@ body {
   .bars {
     padding: 20px;  
     color: red solid 2px;
+    
   }
 
   .nav img {
@@ -20,6 +21,21 @@ body {
   .nav {
       display: flex;
       justify-content: center;
+  }
+
+  .navLink {
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer; 
+  }
+  .navLink:active {
+    color: #15cdfc;
   }
 
   .navbtnlink {
