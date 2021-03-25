@@ -16,18 +16,18 @@ function Quiz() {
   // const [resultsSent, setResultsSent] = useState(false); //! can't find where this is being used for now
   const [category, setCategory] = useState("9");
   const [difficulty, setDifficulty] = useState("easy");
-//   const [type, setType] = useState("boolean");
+  const [type, setType] = useState("boolean");
 
 
   const getQuestions = async () => {
-    let url = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}`;
+    let url = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=${type}`;
     await axios
       .get(url)
       .then((res) => {
         let data = res.data.results.map((question) => {
           return {
             category: question.category,
-            // type: question.type,
+            type: question.type,
             difficulty: question.difficulty,
             question: question.question,
             answers: shuffle([
@@ -108,6 +108,7 @@ function Quiz() {
                 setDifficulty = {setDifficulty}
                 category = {category}
                 setCategory = {setCategory}
+                setType = {setType}
               />
               <button id="startQuiz" value="startQuiz" onClick={startQuiz}>
                 Be inQuizitive!!
