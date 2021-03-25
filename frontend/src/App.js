@@ -1,20 +1,23 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Home from './components/home/Home';
-import "./App.css";
 import Footer from "./components/footer/Footer";
+import "./App.css";
 import Login from './components/login/Login';
 import Quiz from './components/quiz/Quiz';
 import About from "./components/about/About";
 import SignUp from './components/signup/Signup';
+import Navbar from './components/navbar/index';
 
 import ProfilePage from './components/profile/Profile';
 
 function App() {
     return (
         <div className="App">
-            <BrowserRouter>
+            <Router>
                 <div className="app-body">
+                    <Navbar />
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route exact path="/login" component={Login} />
@@ -27,7 +30,7 @@ function App() {
                         <Footer />
                     </div>
                 </div>
-            </BrowserRouter>
+            </Router>
         </div>
     )
 };
