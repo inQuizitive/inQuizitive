@@ -7,6 +7,8 @@ import Login from './components/login/Login';
 import Quiz from './components/quiz/Quiz';
 import About from "./components/about/About";
 
+import ProfilePage from './components/profile/Profile';
+
 function App() {
     return (
         <div className="App">
@@ -17,6 +19,7 @@ function App() {
                         <Route exact path="/login" component={Login} />
                         <Route exact path="/quiz" component={Quiz} />
                         <Route exact path="/about" component={About} />
+                        <Route exact path="/profile" component={ProfilePage} />
                     </Switch>
                     <div className="footer-body">
                         <Footer />
