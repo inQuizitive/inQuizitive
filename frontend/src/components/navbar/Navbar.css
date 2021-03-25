@@ -10,7 +10,8 @@ body {
   };
 
   .bars {
-      color: red solid 2px;
+    padding: 20px;  
+    color: red solid 2px;
   }
 
   .nav img {
@@ -20,3 +21,23 @@ body {
       display: flex;
       justify-content: center;
   }
+
+  .navbtnlink {
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    border: #000 1px solid;
+    border-radius: 4px;
+    background: #8DCAFF;
+    padding: 10px 22px;
+    margin-left: 24px;
+  }
+
+  .navbtnlink:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
+  ;
