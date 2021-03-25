@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 export const Nav = styled.nav`
   background: #d9d9d9;
+  width: 100%;
   height: 15vh;
   display: flex;
   justify-content: space-between;
@@ -47,7 +48,7 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: -24px;
+  margin-right: 5vh;
   /* Second Nav */
   /* margin-right: 24px; */
   /* Third Nav */
