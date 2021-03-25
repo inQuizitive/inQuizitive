@@ -1,0 +1,11 @@
+.about-title{
+    color: var(--logoBlue);
+}
+.about-content{
+    width: 80%;
+    padding: 0% 10%;
+    text-align: center;
+}
+.about-content a:hover{
+    text-decoration: underline;
+}
