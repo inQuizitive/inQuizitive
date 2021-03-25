@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from "axios";
 
@@ -17,7 +17,7 @@ function GameOver(props) {
             difficulty: props.difficulty,
             quizTakenAt: Date.now()
         }).then((res) => {
-            if (res.data.status == 'OK') {
+            if (res.data.status === 'OK') {
                 alert("Results added to user history and leaderboard!");
             }
             else {
