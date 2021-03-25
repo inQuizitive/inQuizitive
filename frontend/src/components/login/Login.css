@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+
+.logIn {
+    padding: 60px 0;
+  }
+
+  .logInForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Fira Code;
+    background-color: #EC4C4C;
+    padding: 5%;
+    border-radius: 25px;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+
+  h1 {
+      font-family: Fira Code;
+      font-size: 50px;
+      text-align: center;
+      color: #8DCAFF;
+  }
+
+  .email {
+    display: flex;
+    color: #F8FC74;
+    font-size: 16pt;
+  }
+
+  .password {
+      display: flex;
+      color: #F8FC74;
+      font-size: 16pt;
+  }
+  input[type=email] {
+    display: flex;
+    border: 0;
+    height: 25px;
+    width: 200px;
+    font-family: Fira Code;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+  input[type=password] {
+      display: flex;
+      border: 0;
+      height: 25px;
+      width: 200px;
+      font-family: Fira Code;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 20px;
+
+  }
+
+
+  

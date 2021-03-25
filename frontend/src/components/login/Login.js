@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import { useHistory } from 'react-router-dom';
+import './Login.css'
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
  
 
   const onChange = (event) => {
@@ -15,40 +17,50 @@ function Login() {
     }
   };
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .post("/users/login", { email, password })
+  const onSubmit = (event) => {
+    event.preventDefault();
+    axios.post("http://localhost:5000/users/login", { email, password })
       .then((res) => {
-        if (res.data.status === "OK") {
+          console.log(res)
+        if (res.status === 200) {
           sessionStorage.setItem("loggedin", true);
           sessionStorage.setItem("email", res.data.email);
           sessionStorage.setItem("username", res.data.username);
-        }
-      });
+          sessionStorage.setItem("userID", res.data.userID);
+          console.log("Logged in");
+          history.push('/');
+        } 
+    })
+    .catch((res) => {
+        alert("Whoops! Your login details are incorrect. Please try again!")
+    })
   };
 
   return (
     <div className="logIn">
       <h1 className="logIn_header">Log In</h1>
       <form onSubmit={onSubmit} className="logInForm">
-        <label htmlfor="email">Email Address:</label>
-        <input
+        <div className = "email">
+        <label htmlFor="email">Email Address:</label>
+        <input class
           onChange={onChange}
           value={email}
           type="email"
           id="email"
-          placeholder="Email"
+          placeholder="Please enter your e-mail"
         />
+        </div>
 
-        <label htmlfor="password">Password:</label>
+        <div className="password">
+        <label htmlFor="password">Password:</label>
         <input
           onChange={onChange}
           value={password}
           type="password"
           id="password"
-          placeholder="Password"
+          placeholder="Enter your password"
         />
+        </div>
 
         <input id="submit_logIn" type="submit" value="Log In" />
         <div className="signup">

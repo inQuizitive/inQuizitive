@@ -91,7 +91,7 @@ router.delete("/id/:id", (req, res) => {
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   if (await Users.checkPassword(email, password)) {
-    Users.findOne({ emailAddress: email }, (err, user) => {
+    Users.findOne({ email: email }, (err, user) => {
       if (err) {
         console.log(err);
         res.status(500).json({ status: "server error", err });
