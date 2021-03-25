@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import "./App.css";
+import Footer from "./components/footer/Footer";
 
 import Login from './components/login/Login';
 import Quiz from './components/quiz/Quiz';
@@ -13,6 +15,9 @@ function App() {
                         <Route exact path="/login" component={Login} />
                         <Route exact path="/quiz" component={Quiz} />
                     </Switch>
+                    <div className="footer-body">
+                        <Footer />
+                    </div>
                 </div>
             </BrowserRouter>
         </div>

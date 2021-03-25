@@ -6,5 +6,12 @@
     --logoBlue: #8DCAFF;
     --logoBlack: #000000;
     --logoWhite: #ffffff;
+    --footerColour: #4B4B4B;
     /*? to use these colours you would say "background-color: var(--logoRed);" */
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Code", sans-serif;
 }

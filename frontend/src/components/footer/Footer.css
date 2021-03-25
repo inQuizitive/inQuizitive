@@ -1,0 +1,37 @@
+.footer-wrapper{
+    bottom: 0;
+    position: sticky;
+    width: 100%;
+}
+footer{
+    display: block;
+    background-color: var(--footerColour);
+}
+.footer-title{
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.footer-title h3{
+    margin: 0;
+    padding: 0;
+}
+.footer-content{
+    display: flex;
+    color: white;
+}
+.about-us-navigation{
+    width: 50%;
+}
+.about-us-title{
+    color: white;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+.resources-navigation{
+    width: 50%;
+}
