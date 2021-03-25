@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../images/logo/inQuizitive.svg';
+import Logo from '../../images/logo/inQuizitive.svg';
 import {
   Nav,
   NavLink,
@@ -19,13 +19,13 @@ const Navbar = () => {
         </NavLink>
         <Bars className='bars' />
         <NavMenu>
-          <NavLink to='/about' activeStyle>
+          <NavLink className='navLink' to='/about' activeStyle>
             About
           </NavLink>
-          <NavLink to='/profile' activeStyle>
+          <NavLink className='navLink' to='/profile' activeStyle>
             Profile
           </NavLink>
-          <NavLink to='/signup' activeStyle>
+          <NavLink className='navLink' to='/signup' activeStyle>
             Sign Up
           </NavLink>
           <NavBtnLink className='navbtnlink' to='/login'>Sign In</NavBtnLink>
