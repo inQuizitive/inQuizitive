@@ -21,18 +21,13 @@ function App() {
                         <Route exact path="/signup" component={SignUp} />
                         <Route exact path="/quiz" component={Quiz} />
                         <Route exact path="/about" component={About} />
-<<<<<<< Updated upstream
                         <Route exact path="/profile" component={ProfilePage} />
                     </Switch>
                     <div className="footer-body">
-=======
-                    </Switch>   
-                </div>
-                <div className="footer-body">
-                    <footer className="app-footer">
->>>>>>> Stashed changes
-                        <Footer />
-                    </footer>
+                        <footer className="app-footer">
+                            <Footer />
+                        </footer>
+                    </div>
                 </div>
             </BrowserRouter>
         </div>
