@@ -40,7 +40,7 @@
     transition: 0.055s ease-out;
 }
 
-a:link, a:visited {
-    color: black;
+.H-section a {
     text-decoration: none;
+    color: black;
 }
