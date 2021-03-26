@@ -6,7 +6,7 @@ function ProfilePage() {
     return (
         <div className="profile-container">
             <div className="svg-container">
-                <span className="profile-page">Profile Page</span>
+                <h2 className="profile-page">Profile Page</h2>
             </div>
 
             <h1 className="delete-acc-text">Delete your account?</h1>

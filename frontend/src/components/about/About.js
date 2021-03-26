@@ -7,9 +7,9 @@ const About = () => {
                 <h1>About us</h1>
             </div>
             <div className="about-content">
-                <p>inQuizitive is a simple yet funky designed, multiple choice quiz application with a huge range of categories and questions!</p>
+                <p>in<span>Quiz</span>itive is a simple yet funky designed, multiple choice quiz application with a huge range of categories and questions!</p>
                 <p>Create an account and save your results, then you will be able to see your scores on our leaderboard!</p>
-                <p>We need you to be in'quiz'itive, and enjoy your experience!</p>
+                <p>We need you to be in<span>'quiz'</span>itive, and enjoy your experience!</p>
                 <p>This application has been handcrafted by <a href="https://github.com/evanmorrisdev" target="_blank">Evan</a>, <a href="https://github.com/LRWright" target="_blank">Le-Ann</a>, <a href="https://github.com/lisarawlings" target="_blank">Lisa</a> and <a href="https://github.com/ruarplum" target="_blank">Ruaraidh!</a></p>
                 <p>Check out our code <a href="https://github.com/inQuizitive/inQuizitive" target="_blank">here</a></p>
             </div>

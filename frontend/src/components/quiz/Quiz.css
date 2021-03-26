@@ -1,0 +1,43 @@
+.quizData{
+    display: flex;
+    height: 70vh;
+}
+.quizSelection{
+    width: 50%;
+    padding: 5vh 0 4vh 25vh;
+}
+.quizSelection h3{
+    margin: 0;
+    padding: 0 0 2vh 0;
+}
+.quiz-start-button{
+    width: 50%;
+    padding: 25vh 0 4vh 5vh;
+}
+#startQuiz{
+    border-radius: 12px;
+    width: 50vh;
+    height: 15vh;
+    background-color: var(--logoWhite);
+    border-color: var(--buttonBlue);
+    color: var(--buttonBlue);
+    font-weight: 600;
+    font-size: 6vh;
+}
+#startQuiz:hover{
+    cursor: pointer;
+    transition-duration: 0.5s;
+    background-color: var(--buttonBlue);
+    color: var(--logoWhite);
+}
+.dropdown-selection{
+    padding: 2vh 0;
+}
+.dropdown-selection select{
+    border-radius: 15px;
+    border-color: var(--buttonBlue);
+    border-width: 0.5vh;
+}
+.dropdown-selection select:hover{
+    cursor: pointer;
+}

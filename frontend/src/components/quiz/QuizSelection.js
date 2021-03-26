@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function QuizSelection(props) {
 
     return (
         <div className="quizSelection">
-          <th>
-            Difficulty:
-            <br />
+          <div className="dropdown-selection">
+            <h3>How in<span>Quiz</span>itive Are You?</h3>
             <select
               name="difficulty"
               onChange={(event) => {
@@ -17,10 +16,9 @@ function QuizSelection(props) {
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
             </select>
-          </th>
-          <th>
-            Quiz Type:
-            <br />
+          </div>
+          <div className="dropdown-selection">
+            <h3>Type of in<span>Quiz</span>itive?</h3>
             <select
               name="type"
               onChange={(event) => { 
@@ -31,10 +29,9 @@ function QuizSelection(props) {
               <option value="boolean">True/False</option>
               <option value="multiple">Multiple Choice</option>
             </select>
-          </th>
-          <th>
-            Category:
-            <br />
+          </div>
+          <div className="dropdown-selection">
+            <h3>in<span>Quiz</span>itive Category:</h3>
             <select
               name="category"
               onChange={(event) => {
@@ -67,7 +64,7 @@ function QuizSelection(props) {
               <option value="31">Japanese Anime & Manga</option>
               <option value="32">Entertainment: Cartoon & Animations</option>
             </select>
-          </th>
+          </div>
         </div>
     )
 }
