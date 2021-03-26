@@ -11,6 +11,8 @@ import SignUp from './components/signup/Signup';
 import Navbar from './components/navbar/index';
 import Faqs from "./components/faq/Faq";
 import ProfilePage from './components/profile/Profile';
+import PageNotFound from './components/pageNotFound/PageNotFound';
+
 
 function App() {
     return (
@@ -26,6 +28,7 @@ function App() {
                         <Route exact path="/about" component={About} />
                         <Route exact path="/profile" component={ProfilePage} />
                         <Route exact path="/frequently-asked-questions" component={Faqs} />
+                        <Route component={PageNotFound} />
                     </Switch>
                     <div className="footer-body">
                         <footer className="app-footer">
