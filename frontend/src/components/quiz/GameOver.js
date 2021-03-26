@@ -38,9 +38,11 @@ setTimeout(saveResults, 2500);
 
 return (
     <div className="game-over-container">
-        <span className="neon-text">Game Over!</span>
+        <h1 className="game-over-title">Game Over!</h1>
+        <h2>Your Score was {props.points}!</h2>
+        <h3>Please press the button below to play again!</h3>
         <div className="restart-quiz-container">
-            <button id="restartQuiz" value="restartQuiz" onClick={restartQuiz}>Next inQuizitive Round</button>
+            <button id="restartQuiz" value="restartQuiz" onClick={restartQuiz}>Play in<span>Quiz</span>itive Again!</button>
         </div>
     </div>
 )

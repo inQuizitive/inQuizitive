@@ -30,9 +30,17 @@ function Question(props) {
 
     return (
         
-         <div>
-            <h1 className="question">
-                {props.question.question.replace('&#039;', "'")
+        <div className="q-wrapper">
+            <div className="quiz-details">
+                <h2 className="q-category">
+                    {props.question.category}
+                </h2>
+                <h2 className="q-difficulty">
+                    Difficulty: {props.question.difficulty}
+                </h2>
+             </div>
+            <h3 className="question">
+                {(props.index) + 1}: {props.question.question.replace('&#039;', "'")
                 .replace('&#O39', "'")
                 .replace('&quot;', '"')
                 .replace('&QUOT;', '"')
@@ -46,19 +54,19 @@ function Question(props) {
                 .replace('&uuml;', 'ü')
                 .replace('&Uuml;', 'Ü')
                 }
-            </h1>
-            <h2 className="category-difficulty">
-              {props.question.category} | {props.question.difficulty}
-            </h2>
+            </h3>
+            
             <div className="allAnswers">              
                 {props.question.answers.map((answer, answerID) => (
-                    <button
+                    <div className="each-answer-button">
+                        <button
                         className = "answer-button" 
                         key = {answerID}
                         onClick = {clickAnswer}
                         value = {answer}
-                    >  {answer} 
-                    </button> 
+                        >  {answer} 
+                        </button>
+                    </div>                     
                 ))}
             </div>
          </div>

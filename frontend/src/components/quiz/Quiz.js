@@ -112,7 +112,7 @@ function Quiz() {
               />
               <div className="quiz-start-button">
                 <button id="startQuiz" value="startQuiz" onClick={startQuiz}>
-                  BEGIN
+                  Let's Be in<span>Quiz</span>itive!
                 </button>
               </div>
            </div>
