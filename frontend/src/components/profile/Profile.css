@@ -30,6 +30,11 @@
     cursor: pointer;
 }
 
+#H-section a {
+    text-decoration: none;
+    color: black;
+}
+
 @media screen and (max-width: 600px) {
     .profile-container {
         display: flex;
