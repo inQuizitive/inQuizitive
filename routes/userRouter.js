@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
   });
 });
 
-router.post("/", async (req, res) => {
+router.post("/signup", async (req, res) => {
   if (req.body.password !== req.body.passwordCheck) {
     return res
       .status(400)

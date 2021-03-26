@@ -110,14 +110,15 @@ function Quiz() {
                 setCategory = {setCategory}
                 setType = {setType}
               />
-              <button id="startQuiz" value="startQuiz" onClick={startQuiz}>
-                Be inQuizitive!!
-              </button>
+              <div className="quiz-start-button">
+                <button id="startQuiz" value="startQuiz" onClick={startQuiz}>
+                  BEGIN
+                </button>
+              </div>
            </div>
           } 
         </>
-      }
-  
+      }  
     </div>
   );
 }

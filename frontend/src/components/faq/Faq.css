@@ -10,9 +10,7 @@
     background-color: var(--logoBlue);
     border-radius: 10px;
 }
-.FAQs-question:hover{
-    cursor: pointer;
-}
+
 .FAQs-question h6{
     padding: 0 5%;
     padding-bottom: 0;

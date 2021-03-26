@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useHistory } from 'react-router-dom';
 import './Signup.css';
 
 function SignUp() {
@@ -7,12 +8,12 @@ function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordCheck, setPasswordCheck] = useState("");
+  const history = useHistory();
 
-  const getResponse = async (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
 
-    axios
-      .post("http://localhost:5000/users/signup", {
+    axios.post("http://localhost:5000/users/signup", {
         username: username,
         email: email,
         password: password,
@@ -22,12 +23,12 @@ function SignUp() {
         console.log(res);
         if (res.status === 200) {
           alert("Yay! Your account has been created");
-          setUser("");
-          setEmail("");
-          setPassword("");
-          setPasswordCheck("");
           sessionStorage.setItem("loggedIn", true);
           sessionStorage.setItem("email", res.data.email);
+          sessionStorage.setItem("username", res.data.username);
+          sessionStorage.setItem("userID", res.data.userID);
+          console.log("Account created successfully")
+          history.push('/');
         }
       })
       .catch((res) => {
@@ -37,7 +38,7 @@ function SignUp() {
       });
   };
 
-  const onChangeHandler = (event) => {
+  const onChange = (event) => {
     if (event.target.id === "username") {
       setUser(event.target.value);
     } else if (event.target.id === "email") {
@@ -52,7 +53,7 @@ function SignUp() {
   return (
     <div className="createAccount">
       <h1 className="createHeader">Create Account</h1>
-      <form onSubmit={getResponse} className="signUpForm">
+      <form onSubmit={onSubmit} className="signUpForm">
         <label htmlFor="Username" className="username">
           Username:
         </label>
@@ -62,7 +63,7 @@ function SignUp() {
           name="userName"
           placeholder="Enter a username"
           value={username}
-          onChange={onChangeHandler}
+          onChange={onChange}
         />
 
         <label htmlFor="email" className="email">
@@ -73,7 +74,7 @@ function SignUp() {
           type="email"
           name="email"
           placeholder="Enter your email address"
-          onChange={onChangeHandler}
+          onChange={onChange}
           value={email}
         />
 
@@ -85,7 +86,7 @@ function SignUp() {
           type="password"
           name="password"
           placeholder="Enter a password"
-          onChange={onChangeHandler}
+          onChange={onChange}
           value={password}
         />
 
@@ -97,13 +98,13 @@ function SignUp() {
           type="password"
           name="passwordCheck"
           placeholder="Verify your password"
-          onChange={onChangeHandler} 
+          onChange={onChange} 
           value={passwordCheck}
         />
 
         <input type="submit" value="Submit" className="submit"></input>
         <a href="/login" className="home-page">
-          Already have an account?
+          Already have an account? Log in here!
         </a>
       </form>
     </div>

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.pageNotFound {
+    font-family: Fira Code;
+    color: #EC4C4C;
+    font-size: 15vh;
+    text-align: center;
+}
+
+.notExist {
+    font-family: Fira Code;
+    color: #8DCAFF;
+    font-size: 5vh;
+    text-align: center;
+}
+
+a.NotFound-Homepage {
+    display: flex;
+    font-family: Fira Code;
+    font-size: 3vh;
+    align-items: center;
+}

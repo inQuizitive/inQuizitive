@@ -28,6 +28,7 @@ function ProfilePage() {
                     link="/leaderboard"
                     button="Leaderboard" />
             </div>
+
         </div>
     )
 }
