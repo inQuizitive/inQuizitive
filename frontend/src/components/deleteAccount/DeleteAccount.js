@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import './DeleteAccount.css';
 
 function DeleteAccount() {
     const history = useHistory();
