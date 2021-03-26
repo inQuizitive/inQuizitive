@@ -13,7 +13,7 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <>
-      <Nav className='nav'>
+      <Nav className='navbar'>
         <NavLink to='/'>
           <img src={Logo} alt='logo' className='logo' />
         </NavLink>
