@@ -103,7 +103,7 @@ function SignUp() {
 
         <input type="submit" value="Submit" className="submit"></input>
         <a href="/login" className="home-page">
-          Already have an account?
+          Already have an account? Log in here!
         </a>
       </form>
     </div>
