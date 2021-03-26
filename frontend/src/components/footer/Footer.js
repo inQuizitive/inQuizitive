@@ -31,7 +31,7 @@ const Footer = () => {
                             <div className="resources-menu">
                                 <div className="menu">
                                     <a href="https://github.com/inQuizitive/inQuizitive" target="_blank">Code</a><br></br>
-                                    <a href="">FAQs</a>
+                                    <a href="/frequently-asked-questions">FAQs</a>
                                 </div>
                             </div>
                         </nav>

@@ -9,7 +9,7 @@ import Quiz from './components/quiz/Quiz';
 import About from "./components/about/About";
 import SignUp from './components/signup/Signup';
 import Navbar from './components/navbar/index';
-
+import Faqs from "./components/faq/Faq";
 import ProfilePage from './components/profile/Profile';
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
                         <Route exact path="/quiz" component={Quiz} />
                         <Route exact path="/about" component={About} />
                         <Route exact path="/profile" component={ProfilePage} />
+                        <Route exact path="/frequently-asked-questions" component={Faqs} />
                     </Switch>
                     <div className="footer-body">
                         <footer className="app-footer">
