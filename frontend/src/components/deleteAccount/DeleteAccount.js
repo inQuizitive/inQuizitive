@@ -21,7 +21,7 @@ function DeleteAccount() {
         event.preventDefault();
         const userID = sessionStorage.getItem("userID")
         const username = sessionStorage.getItem("username")
-        axios.delete(`users/id/${userID}`, {
+        axios.delete(`http://localhost:5000/users/id/${userID}`, {
             data: {
                 email,
                 password,

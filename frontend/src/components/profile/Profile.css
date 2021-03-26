@@ -2,7 +2,7 @@
 .profile-container {
     margin: 0 auto;
     box-sizing: border-box;
-    width: 70vw;
+    width: 90vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -11,15 +11,9 @@
 
 .H-section-container {
     font-family: fira code;
-    z-index: 2;
-    width: 35vw;
-    height: 17vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 1%;
-    overflow: hidden;
-    padding-right: 1%;
     border-radius: 0.6em;
     /*shadows*/
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
@@ -29,17 +23,14 @@
 #H-section-button {
     font-family: fira code;
     height: 10%;
-    margin-top: 2%;
     padding: 0 2% 0 2%;
     border-radius: 1em;
     background-color: #F8FC74;
     border: none;
-    font-weight: 600;
     cursor: pointer;
-    transition: 0.055s ease-out;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 600px) {
     .profile-container {
         display: flex;
         flex-direction: column;
