@@ -1,19 +1,33 @@
 import React from 'react';
-import DeleteAccount from '../deleteAccount/DeleteAccount';
+import Section from '../home/HomeSection';
 
 
 function ProfilePage() {
     return (
         <div className="profile-container">
-            <div className="svg-container">
-                <span className="profile-page">Profile Page</span>
-            </div>
+            <h1 className="profile-header">Profile Page</h1>
 
-            <h1 className="delete-acc-text">Delete your account?</h1>
-            <DeleteAccount />
 
-            <h1 className="user-history">User History</h1>
-            <h1 className="leader-board">Leader Board</h1>
+            <Section heading="User details"
+                text="User details"
+                text="User details"
+                button="Edit details" />
+
+            <Section heading="Delete Account"
+                text="Delete Your Account"
+                link="/delete"
+                button="Delete Account" />
+
+            <Section heading="User History"
+                text="User History"
+                link="/userhistory"
+                button="User History" />
+
+            <Section heading="Leaderboard"
+                text="See the scores"
+                link="/leaderboard"
+                button="Leaderboard" />
+
         </div>
     )
 }
