@@ -17,7 +17,7 @@
 #startQuiz{
     border-radius: 12px;
     width: 50vh;
-    height: 15vh;
+    height: 16vh;
     background-color: var(--logoWhite);
     border-color: var(--buttonBlue);
     color: var(--buttonBlue);
@@ -28,7 +28,6 @@
     cursor: pointer;
     transition-duration: 0.5s;
     background-color: var(--buttonBlue);
-    color: var(--logoWhite);
 }
 .dropdown-selection{
     padding: 2vh 0;
@@ -40,4 +39,39 @@
 }
 .dropdown-selection select:hover{
     cursor: pointer;
+}
+.q-wrapper{
+    width: 80%;
+    padding: 0 10%;
+}
+.quiz-details h2{
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    font-size: 4vh;
+}
+.question{
+    text-align: center;
+}
+.allAnswers{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    padding-bottom: 8vh;
+}
+.each-answer-button button{
+    border: 0;
+    background-color: var(--buttonBlue);
+    border-color: var(--buttonBlue);
+    color: var(--logoWhite);
+    width: 15vh;
+    height: 9vh;
+}
+.each-answer-button button:hover{
+    cursor: pointer;
+    transition: 0.4s;
+    color: var(--logoBlack);
+    font-weight: 700;
+    font-size: 3.5vh;
 }
