@@ -23,7 +23,7 @@ const Faqs = () => {
                 </div>
                 <br></br>
                 <div className="FAQs-question">
-                    <h6>How Does inQuizitives Leaderboard Work?</h6>
+                    <h6>How Does in<span>Quiz</span>itives Leaderboard Work?</h6>
                     <p>Our <a href="/leaderboard">leaderboard</a> shows a list of player results from highest to lowest. Using any filtering options at the top of the leaderboard, you can see the top results for different categories, difficulties and quiz types!</p>
                 </div>
                 <br></br>

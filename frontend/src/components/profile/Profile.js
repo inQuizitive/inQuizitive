@@ -5,7 +5,10 @@ import Section from '../home/HomeSection';
 function ProfilePage() {
     return (
         <div className="profile-container">
-            <h1 className="profile-header">Profile Page</h1>
+            <div className="svg-container">
+                <h1 className="profile-header">Profile Page</h1>
+            </div>
+            
 
 
             <Section heading="User details"
