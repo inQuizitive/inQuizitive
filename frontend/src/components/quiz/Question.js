@@ -1,4 +1,5 @@
 import React from 'react';
+import Replacer from '../../lib/Replacer';
 
 function Question(props) {
 
@@ -30,6 +31,7 @@ function Question(props) {
 
     return (
         
+<<<<<<< Updated upstream
         <div className="q-wrapper">
             <div className="quiz-details">
                 <h2 className="q-category">
@@ -56,6 +58,14 @@ function Question(props) {
                 }
             </h3>
             
+=======
+         <div>
+             <h1>
+                 {Replacer(props.question.question)}</h1>
+            <h2 className="category-difficulty">
+              {props.question.category} | {props.question.difficulty}
+            </h2>
+>>>>>>> Stashed changes
             <div className="allAnswers">              
                 {props.question.answers.map((answer, answerID) => (
                     <div className="each-answer-button">
@@ -63,10 +73,16 @@ function Question(props) {
                         className = "answer-button" 
                         key = {answerID}
                         onClick = {clickAnswer}
+<<<<<<< Updated upstream
                         value = {answer}
                         >  {answer} 
                         </button>
                     </div>                     
+=======
+                        value = {Replacer(answer)}
+                    >  {Replacer(answer)} 
+                    </button> 
+>>>>>>> Stashed changes
                 ))}
             </div>
          </div>
