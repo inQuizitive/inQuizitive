@@ -35,15 +35,15 @@ const Leaderboard = () => {
             <div className="table-wrapper">
                 <table className="leaderboard-table">
                     <th>
-                        Player
-                </th>
+                        <h1>Player</h1>
+                    </th>
                     <th>
-                        Category
+                        <h1>Category</h1>
                         <br></br>
                         <input type="text" placeholder="Search..."></input>
                     </th>
                     <th>
-                        Quiz Type
+                        <h1>Quiz Type</h1>
                         <br></br>
                         <select name="Quiz-Type">
                             <option value="" selected>Both</option>
@@ -52,7 +52,7 @@ const Leaderboard = () => {
                         </select>
                     </th>
                     <th>
-                        Difficulty
+                        <h1>Difficulty</h1>
                         <br></br>
                         <select name="Difficulty">
                             <option value="" selected>All</option>
@@ -60,10 +60,11 @@ const Leaderboard = () => {
                             <option value="medium">Medium</option>
                             <option value="hard">Hard</option>
                         </select>
-                </th>
+                    </th>
                     <th>
-                        Score
-                </th>
+                        <h1>Score</h1>
+                    </th>
+
                 </table>
             </div>
         </div>
