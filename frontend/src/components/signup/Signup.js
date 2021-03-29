@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useHistory } from 'react-router-dom';
-import './Signup.css';
+import { useHistory } from "react-router-dom";
+import "./Signup.css";
+import Swal from "sweetalert2";
 
 function SignUp() {
   const [username, setUser] = useState("");
@@ -13,7 +14,8 @@ function SignUp() {
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    axios.post("http://localhost:5000/users/signup", {
+    axios
+      .post("http://localhost:5000/users/signup", {
         username: username,
         email: email,
         password: password,
@@ -22,17 +24,25 @@ function SignUp() {
       .then((res) => {
         console.log(res);
         if (res.status === 200) {
-          alert("Yay! Your account has been created");
+          Swal.fire(
+            "Yay!",
+            "Your account has sucessfully been created",
+            "success"
+          );
           sessionStorage.setItem("loggedIn", true);
           sessionStorage.setItem("email", res.data.email);
           sessionStorage.setItem("username", res.data.username);
           sessionStorage.setItem("userID", res.data.userID);
-          console.log("Account created successfully")
-          history.push('/');
+          console.log("Account created successfully");
+          history.push("/");
         }
       })
       .catch((res) => {
-        alert("Whoops! Passwords do not match. Please try again!");
+        Swal.fire(
+          "Oops!",
+          "Your passwords do not match. Please try again",
+          "warning"
+        );
         setPassword("");
         setPasswordCheck("");
       });
@@ -98,7 +108,7 @@ function SignUp() {
           type="password"
           name="passwordCheck"
           placeholder="Verify your password"
-          onChange={onChange} 
+          onChange={onChange}
           value={passwordCheck}
         />
 
