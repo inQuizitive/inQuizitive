@@ -63,7 +63,7 @@ function Quiz() {
 
   const playGame = () => {
     if (index === 10) {
-        alert('you made it');
+        // alert('you made it');
         setQuizStarted(false)
         setQuizEnded(true);
       return;
@@ -112,7 +112,7 @@ function Quiz() {
               />
               <div className="quiz-start-button">
                 <button id="startQuiz" value="startQuiz" onClick={startQuiz}>
-                  Let's Be in<span>Quiz</span>itive!
+                  Be in<span>Quiz</span>itive!
                 </button>
               </div>
            </div>

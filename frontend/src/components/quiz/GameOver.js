@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from "axios";
+import "./GameOver.css";
 
 function GameOver(props) {
 
@@ -38,9 +39,14 @@ setTimeout(saveResults, 2500);
 
 return (
     <div className="game-over-container">
-        <h1 className="game-over-title">Game Over!</h1>
-        <h2>Your Score was {props.points}!</h2>
-        <h3>Please press the button below to play again!</h3>
+        <div className="game-over-title">
+            <h1 id="go-title">Game Over!</h1>
+        </div>
+        <div className="game-over-content">
+            <h2 id="what-score">Your Score was: <span >{props.points}</span>!</h2>
+            <h3 id="press-restart-button">Please press the button below to play again!</h3>
+        </div>
+        
         <div className="restart-quiz-container">
             <button id="restartQuiz" value="restartQuiz" onClick={restartQuiz}>Play in<span>Quiz</span>itive Again!</button>
         </div>

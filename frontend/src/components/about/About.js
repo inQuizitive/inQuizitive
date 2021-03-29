@@ -11,7 +11,7 @@ const About = () => {
                 <p>Create an account and save your results, then you will be able to see your scores on our leaderboard!</p>
                 <p>We need you to be in<span>Quiz</span>itive, and enjoy your experience!</p>
                 <p>This application has been handcrafted by <a href="https://github.com/evanmorrisdev" target="_blank">Evan</a>, <a href="https://github.com/LRWright" target="_blank">Le-Ann</a>, <a href="https://github.com/lisarawlings" target="_blank">Lisa</a> and <a href="https://github.com/ruarplum" target="_blank">Ruaraidh!</a></p>
-                <p>Check out our code <a href="https://github.com/inQuizitive/inQuizitive" target="_blank">here</a></p>
+                <p>Developers: Check out our code <a href="https://github.com/inQuizitive/inQuizitive" target="_blank">here</a></p>
             </div>
         </div>
     )

@@ -36,7 +36,7 @@ function Question(props) {
                     {props.question.category}
                 </h2>
                 <h2 className="q-difficulty">
-                    Difficulty: {props.question.difficulty}
+                    Difficulty: <span>{props.question.difficulty}</span>
                 </h2>
              </div>
             <h3 className="question">
