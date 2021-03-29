@@ -13,6 +13,7 @@ import NewNavbar from './components/navbar/NewNavbar';
 import ProfilePage from './components/profile/Profile';
 import PageNotFound from './components/pageNotFound/PageNotFound';
 import DeleteAccount from './components/deleteAccount/DeleteAccount';
+import Leaderboard from "./components/leaderboard/Leaderboard";
 
 function App() {
     return (
@@ -28,9 +29,9 @@ function App() {
                         <Route exact path="/about" component={About} />
                         <Route exact path="/profile" component={ProfilePage} />
                         <Route exact path="/frequently-asked-questions" component={Faqs} />
-                        <Route exact path="/delete" component={DeleteAccount} />                  
-                        <Route component={PageNotFound} />
-                        
+                        <Route exact path="/delete" component={DeleteAccount} /> 
+                        <Route exact path="/leaderboard" component={Leaderboard} />                 
+                        <Route component={PageNotFound} />                       
 
                     </Switch>
                     <div className="footer-body">
