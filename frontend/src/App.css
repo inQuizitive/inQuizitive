@@ -1,37 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
 :root {
-    --buttonBlue: #47aaff;
-    --logoRed: #EC4C4C;
-    --logoYellow: #F8FC74;
-    --logoBlue: #8DCAFF;
-    --logoBlack: #000000;
-    --logoWhite: #ffffff;
-    --footerColour: #4B4B4B;
-    /*? to use these colours you would say "background-color: var(--logoRed);" */
+  --buttonBlue: #47aaff;
+  --logoRed: #ec4c4c;
+  --logoYellow: #f8fc74;
+  --logoBlue: #8dcaff;
+  --logoBlack: #000000;
+  --logoWhite: #ffffff;
+  --footerColour: #4b4b4b;
+  /*? to use these colours you would say "background-color: var(--logoRed);" */
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Fira Code", monospace;
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code", monospace;
 }
 
 span{
     color: var(--logoRed);
+
+span {
+  color: var(--logoRed);
 }
 
-::-webkit-scrollbar{
-    width: 2vh;
-    opacity: 0;
+::-webkit-scrollbar {
+  width: 2vh;
+  opacity: 0;
 }
-::-webkit-scrollbar-track{
-    border-radius: 15px;
+::-webkit-scrollbar-track {
+  border-radius: 15px;
 }
-::-webkit-scrollbar-thumb{
-    background-color: var(--logoBlue);
-    border-radius: 10px;
+::-webkit-scrollbar-thumb {
+  background-color: var(--logoBlue);
+  border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover{
-    background-color: var(--buttonBlue);
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--buttonBlue);
+}
+
+@media (max-width: 480px) {
+  footer {
+    display: none;
+  }
 }
