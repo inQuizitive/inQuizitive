@@ -7,6 +7,7 @@ const Result = new mongoose.Schema({
     score: {type: Number, required: true},
     category: {type: String, required: true},
     difficulty: {type: String, required: true},
+    quizType: {type: String, required: true},
     quizDateTime: {type: Date, required: true},
 })
 
