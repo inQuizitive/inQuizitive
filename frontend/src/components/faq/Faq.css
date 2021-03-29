@@ -4,6 +4,7 @@
 }
 .FAQs-title h1{
     color: var(--logoBlack);
+    font-size: 7vh;
 }
 .FAQs-question{
     padding: 2vh 0;
@@ -12,12 +13,14 @@
 }
 
 .FAQs-question h6{
-    padding: 0 5%;
+    padding: 0 5% 2.5% 5%;
+    margin: 0%;
     padding-bottom: 0;
     font-size: 4vh;
 }
 .FAQs-question p{
     padding: 0 10%;
+    font-size: 3vh;
 }
 .FAQs-question  a{
     color: var(--logoBlack);

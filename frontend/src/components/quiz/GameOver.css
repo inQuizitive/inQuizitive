@@ -1,13 +1,38 @@
-.game-over.container{
+.game-over-container{
+    height: 75%;
     width: 80%;
-    padding: 0 10%;
+    padding: 2.5% 10% 5%;
 }
-.game-over.container h1{
+#go-title{
     text-align: center;
-    padding: 0;
+    padding: 0 0 2.5%;
     margin: 0;
+    font-size: 8vh;
+}
+#what-score{
+    text-align: center;
+    padding: 0 0 1.5%;
+    margin: 0;
+    font-size: 5vh;
+}
+#press-restart-button{
+    text-align: center;
+    padding: 0 0 1.5%;
+    margin: 0;
+    font-size: 4vh;
 }
 .restart-quiz-container{
-    place-items: center;
-    padding-bottom: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#restartQuiz{
+    border-radius: 12px;
+    width: 20%;
+    font-size: 150%;
+    background-color: white;
+}
+#restartQuiz:hover{
+    cursor: pointer;
+    font-weight: 550;
 }

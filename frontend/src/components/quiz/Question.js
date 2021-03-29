@@ -29,13 +29,16 @@ function Question(props) {
       );
     }
   };
-
+  
   return (
     <div>
       <h1>{Replacer(props.question.question)}</h1>
-      <h2 className="category-difficulty">
-        {props.question.category} | {props.question.difficulty}
-      </h2>
+     <h2 className="q-category">
+                    {props.question.category}
+                </h2>
+                <h2 className="q-difficulty">
+                    Difficulty: <span>{props.question.difficulty}</span>
+                </h2>
       <div className="allAnswers">
         {props.question.answers.map((answer, answerID) => (
           <div className="each-answer-button">

@@ -4,7 +4,9 @@
 }
 .quizSelection{
     width: 50%;
-    padding: 5vh 0 4vh 25vh;
+    display: grid;
+    justify-content: center;
+    padding-left: 10%;
 }
 .quizSelection h3{
     margin: 0;
@@ -12,27 +14,33 @@
 }
 .quiz-start-button{
     width: 50%;
-    padding: 25vh 0 4vh 5vh;
+    display: flex;
+    align-items: center;
 }
 #startQuiz{
-    border-radius: 12px;
-    width: 50vh;
-    height: 16vh;
+    border-radius: 12px; 
+    width: auto;
+    height: auto;
     background-color: var(--logoWhite);
-    border-color: var(--buttonBlue);
-    color: var(--buttonBlue);
     font-weight: 600;
     font-size: 6vh;
+    padding: 2.5%;
+    margin: 0;
 }
 #startQuiz:hover{
     cursor: pointer;
     transition-duration: 0.5s;
-    background-color: var(--buttonBlue);
+    border-width: 0.5vh;
 }
 .dropdown-selection{
     padding: 2vh 0;
+    width: 100%;
+}
+.dropdown-selection h3{
+    font-size: 5vh;
 }
 .dropdown-selection select{
+    font-size: 4vh;
     border-radius: 15px;
     border-color: var(--buttonBlue);
     border-width: 0.5vh;
@@ -50,8 +58,12 @@
     margin: 0;
     font-size: 4vh;
 }
+.q-category{
+    text-decoration: underline;
+}
 .question{
     text-align: center;
+    font-size: 5vh;
 }
 .allAnswers{
     display: grid;
@@ -63,15 +75,12 @@
 .each-answer-button button{
     border: 0;
     background-color: var(--buttonBlue);
-    border-color: var(--buttonBlue);
     color: var(--logoWhite);
-    width: 15vh;
-    height: 9vh;
+    font-size: 5vh;
+    padding: 20%;
 }
 .each-answer-button button:hover{
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.5s;
     color: var(--logoBlack);
-    font-weight: 700;
-    font-size: 3.5vh;
 }

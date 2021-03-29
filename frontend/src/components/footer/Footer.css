@@ -18,9 +18,15 @@ footer{
     padding-top: 2.5vh;
     font-size: 6vh;
 }
+.footer-title span{
+    color: black;
+}
 .footer-content{
     display: flex;
-    color: white;
+    color: black;
+}
+.about-us-footer-title{
+    color: black;
 }
 .footer-content h5{
     margin: 0;

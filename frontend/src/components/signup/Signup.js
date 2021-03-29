@@ -52,7 +52,7 @@ function SignUp() {
 
   return (
     <div className="createAccount">
-      <h1 className="createHeader">Create Account</h1>
+      <h1 className="createHeader">Create a New Account</h1>
       <form onSubmit={onSubmit} className="signUpForm">
         <label htmlFor="Username" className="username">
           Username:
