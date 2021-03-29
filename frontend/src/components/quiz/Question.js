@@ -34,7 +34,7 @@ function Question(props) {
       props.setIndex(props.index + 1);
       Swal.fire({
         title: "Uh Oh!",
-        text: "That is the incorrect answer!",
+        text: `That is the incorrect answer! The correct answer is: '${props.question.correctAnswer}'.`,
         imageUrl: "https://media.giphy.com/media/xUPJPzcdlbvaFUrF7y/giphy.gif",
         imageWidth: 300,
         imageHeight: 200,
