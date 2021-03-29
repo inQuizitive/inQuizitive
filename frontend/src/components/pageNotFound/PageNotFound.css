@@ -1,22 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
 .pageNotFound {
-    font-family: Fira Code;
-    color: #EC4C4C;
-    font-size: 15vh;
-    text-align: center;
+  font-family: Fira Code;
+  color: #ec4c4c;
+  font-size: 15vh;
+  text-align: center;
 }
 
 .notExist {
-    font-family: Fira Code;
-    color: #8DCAFF;
-    font-size: 5vh;
-    text-align: center;
+  font-family: Fira Code;
+  color: #8dcaff;
+  font-size: 5vh;
+  text-align: center;
 }
 
-a.NotFound-Homepage {
-    display: flex;
-    font-family: Fira Code;
-    font-size: 3vh;
-    align-items: center;
+.take-me-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.takemehome {
+  display: flex;
+  border: 0;
+  font-family: Fira Code;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 20vh;
+  background-color: #f8fc74;
+  align-items: center;
+  justify-content: center;
+}
+
+a.takemehome:visited {
+  text-decoration: none;
+  color: black;
 }
