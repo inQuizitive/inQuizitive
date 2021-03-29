@@ -1,5 +1,6 @@
 import React from "react";
 import Replacer from "../../lib/Replacer";
+import Swal from "sweetalert2";
 
 function Question(props) {
   const clickAnswer = (event) => {
@@ -17,16 +18,28 @@ function Question(props) {
     if (props.timeLeft >= 0) {
       props.setIndex(props.index + 1);
       props.setPoints(props.points + 10);
-      alert("Correct");
+      Swal.fire({
+        title: "Yay!",
+        text: "That is the correct answer!",
+        imageUrl: "https://media.giphy.com/media/FlWgXEtj5aM5G/giphy.gif",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Custom image",
+      });
     }
   };
 
   const questionIncorrect = () => {
     if (props.timeLeft >= 0) {
       props.setIndex(props.index + 1);
-      alert(
-        `Incorrect The correct answer was: ${props.question.correctAnswer}`
-      );
+      Swal.fire({
+        title: "Uh Oh!",
+        text: "That is the incorrect answer!",
+        imageUrl: "https://media.giphy.com/media/xUPJPzcdlbvaFUrF7y/giphy.gif",
+        imageWidth: 300,
+        imageHeight: 200,
+        imageAlt: "Custom image",
+      });
     }
   };
 
@@ -34,15 +47,14 @@ function Question(props) {
     <div className="q-wrapper">
       <div className="quiz-details">
         <div className="q-details">
-          <h2 className="q-category">
-            {props.question.category}
-          </h2>
+          <h2 className="q-category">{props.question.category}</h2>
           <h2 className="q-difficulty">
             Difficulty: <span>{props.question.difficulty}</span>
           </h2>
         </div>
         <h2 className="question">
-          {(props.index + 1)}: {Replacer(props.question.question)}</h2>
+          {props.index + 1}: {Replacer(props.question.question)}
+        </h2>
       </div>
       <div className="allAnswers">
         {props.question.answers.map((answer, answerID) => (
