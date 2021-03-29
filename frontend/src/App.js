@@ -9,7 +9,7 @@ import Quiz from './components/quiz/Quiz';
 import About from "./components/about/About";
 import SignUp from './components/signup/Signup';
 import Faqs from "./components/faq/Faq";
-import NewNavbar from './components/navbar/NewNavbar';
+import Navbar from './components/navbar/Navbar';
 import ProfilePage from './components/profile/Profile';
 import PageNotFound from './components/pageNotFound/PageNotFound';
 import DeleteAccount from './components/deleteAccount/DeleteAccount';
@@ -19,7 +19,7 @@ function App() {
         <div className="App">
             <Router>
                 <div className="app-body">
-                    <NewNavbar />
+                    <Navbar />
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route exact path="/login" component={Login} />

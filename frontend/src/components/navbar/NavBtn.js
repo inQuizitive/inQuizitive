@@ -1,13 +1,15 @@
 import React from 'react'
 
-const NavBtn = () => {
+const MenuBtn = (props) => {
     return (
         <div>
-            <button>About</button>
-            <button>Profile</button>
-            <button>Sign Up</button>
+            <button
+            className='menu-button'
+            onClick={props.onClick}>
+                {props.text}
+            </button>
         </div>
-    )
-}
+    );
+};
 
-export default NavBtn
+export default MenuBtn
