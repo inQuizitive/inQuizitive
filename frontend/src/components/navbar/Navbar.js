@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from "react-router-dom"
 import './Navbar.css';
-import Logo from '../../images/logo/InQuizitiveWhiteRed.svg';
+import Logo from '../../images/logo/InQuizitiveLogo.svg';
 // import MenuBtn from './NavBtn';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineCloseSquare } from 'react-icons/ai';
@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <nav className='nav-container'>
             <div className='logo'>
-                <img src={Logo} alt='logo image' onClick='/' />
+                <img src={Logo} alt='logo' onClick='/' />
             </div>
             <div className='nav-menu'>
                 <button onClick={handleToggle}>{navbarOpen ? <AiOutlineCloseSquare className='navMenu-icon' /> : <FaBars className='navMenu-icon' /> }</button>
