@@ -45,35 +45,34 @@ function Login() {
     <div className="logIn">
       <h1 className="logInHeader">Log In</h1>
       <form onSubmit={onSubmit} className="logInForm">
-        <div className="email">
-          <label htmlFor="email">Email Address:</label>
-          <input
-            class
-            onChange={onChange}
-            value={email}
-            type="email"
-            id="email"
-            placeholder="Please enter your e-mail"
-          />
-        </div>
+        <label htmlFor="email" className="email">
+          Email Address:
+        </label>
 
-        <div className="password">
-          <label htmlFor="password">Password:</label>
-          <input
-            onChange={onChange}
-            value={password}
-            type="password"
-            id="password"
-            placeholder="Enter your password"
-          />
-        </div>
+        <input
+          class
+          onChange={onChange}
+          value={email}
+          type="email"
+          id="email"
+          placeholder="Please enter your e-mail"
+        />
+
+        <label htmlFor="password" className="password">
+          Password:
+        </label>
+        <input
+          onChange={onChange}
+          value={password}
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+        />
 
         <input id="submit_logIn" type="submit" value="Log In" />
-        <div className="signup">
-          <a href="/signup" className="signup_link">
-            Not got an account? Create one here!
-          </a>
-        </div>
+        <a href="/signup" className="signup_link">
+          Not got an account? Create one here!
+        </a>
       </form>
     </div>
   );

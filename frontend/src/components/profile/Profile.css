@@ -1,43 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 .profile-container {
-    margin: 0 auto;
-    box-sizing: border-box;
-    width: 90vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .H-section-container {
-    font-family: fira code;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 0.6em;
-    /*shadows*/
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-    border: solid 2px#EC4C4C
+  font-family: fira code;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.6em;
+  /*shadows*/
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  border: solid 2px#EC4C4C;
 }
 
 #H-section-button {
-    font-family: fira code;
-    height: 10%;
-    padding: 0 2% 0 2%;
-    border-radius: 1em;
-    background-color: #F8FC74;
-    border: none;
-    cursor: pointer;
+  font-family: fira code;
+  height: 10%;
+  padding: 0 2% 0 2%;
+  border-radius: 1em;
+  background-color: #f8fc74;
+  border: none;
+  cursor: pointer;
 }
 
 #H-section a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 @media screen and (max-width: 600px) {
-    .profile-container {
-        display: flex;
-        flex-direction: column;
-    }
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+  }
 }

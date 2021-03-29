@@ -1,62 +1,71 @@
- @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
 .signUpForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: Fira Code;
-    background-color: #EC4C4C;
-    padding: 5%;
-    border-radius: 25px;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-bottom: 5vh;
-  }
-
-  .createHeader {
-    font-family: Fira Code;
-    font-size: 50px;
-    text-align: center;
-    color: #8DCAFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Fira Code;
+  background-color: #ec4c4c;
+  padding: 5%;
+  border-radius: 25px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 5vh;
 }
 
-.username, .passwordCheck {
-        display: flex;
-        color: #F8FC74;
-        font-size: 16pt;
-} 
+.createHeader {
+  font-family: Fira Code;
+  font-size: 50px;
+  text-align: center;
+  color: #8dcaff;
+}
 
-input[type=username] {
-    display: flex;
-    border: 0;
-    height: 25px;
-    width: 200px;
-    font-family: Fira Code;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
-} 
+.username,
+.passwordCheck {
+  display: flex;
+  color: #f8fc74;
+  font-size: 16pt;
+  text-align: center;
+}
 
-input[type=passwordCheck] {
-    display: flex;
-    border: 0;
-    height: 25px;
-    width: 200px;
-    font-family: Fira Code;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
-} 
+input[type="username"] {
+  display: flex;
+  border: 0;
+  height: 25px;
+  width: 200px;
+  font-family: Fira Code;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
 
-input[type=submit] {
-    display: flex;
-    border: 0;
-    font-family: Fira Code;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    height: 50px;
-    width: auto;
-    background-color:#F8FC74
+input[type="passwordCheck"] {
+  display: flex;
+  border: 0;
+  height: 25px;
+  width: 200px;
+  font-family: Fira Code;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  display: flex;
+  border: 0;
+  font-family: Fira Code;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 50px;
+  width: auto;
+  background-color: #f8fc74;
+}
+
+@media (max-width: 480px) {
+  .signUpForm {
+    width: 50%;
+    align-content: center;
+  }
 }
