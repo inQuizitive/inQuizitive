@@ -29,16 +29,21 @@ function Question(props) {
       );
     }
   };
-  
+
   return (
-    <div>
-      <h1>{Replacer(props.question.question)}</h1>
-     <h2 className="q-category">
-                    {props.question.category}
-                </h2>
-                <h2 className="q-difficulty">
-                    Difficulty: <span>{props.question.difficulty}</span>
-                </h2>
+    <div className="q-wrapper">
+      <div className="quiz-details">
+        <div className="q-details">
+          <h2 className="q-category">
+            {props.question.category}
+          </h2>
+          <h2 className="q-difficulty">
+            Difficulty: <span>{props.question.difficulty}</span>
+          </h2>
+        </div>
+        <h2 className="question">
+          {(props.index + 1)}: {Replacer(props.question.question)}</h2>
+      </div>
       <div className="allAnswers">
         {props.question.answers.map((answer, answerID) => (
           <div className="each-answer-button">

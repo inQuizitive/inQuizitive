@@ -52,11 +52,17 @@
     width: 80%;
     padding: 0 10%;
 }
+.quiz-details{
+    padding: 5% 0;
+}
 .quiz-details h2{
     text-transform: uppercase;
     padding: 0;
     margin: 0;
     font-size: 4vh;
+}
+.q-details{
+    padding-bottom: 3vh;
 }
 .q-category{
     text-decoration: underline;
@@ -64,6 +70,9 @@
 .question{
     text-align: center;
     font-size: 5vh;
+}
+.q-difficulty{
+    padding-bottom: 2vh;
 }
 .allAnswers{
     display: grid;
@@ -76,7 +85,10 @@
     border: 0;
     background-color: var(--buttonBlue);
     color: var(--logoWhite);
-    font-size: 5vh;
+    font-size: 3.5vh;
+    border-radius: 10px;
+    width: 25vh;
+    height: 20vh;
     padding: 20%;
 }
 .each-answer-button button:hover{
