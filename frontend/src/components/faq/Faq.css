@@ -5,6 +5,7 @@
 .FAQs-title h1{
     color: var(--logoBlack);
     font-size: 7vh;
+    padding: 2.5% 0;
 }
 .FAQs-question{
     padding: 2vh 0;
