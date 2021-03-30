@@ -21,16 +21,17 @@ return (
             <img src={Logo} alt='logo' onClick='/' />
             </a>
         </div>
-        {/* Button shows log in text and takes you to log in page - if logged in it shows username */}
-        <div className='nav-menu'>
-            <button onClick={handleToggle}>{navbarOpen ? <AiOutlineCloseSquare className='navMenu-icon' /> : <FaBars className='navMenu-icon' />}</button>
-            {!props.user.userName ? 
+        <div className='loginStatusBtns'>
+        {!props.user.userName ? 
                 <button className='loginBtn' onClick='/login'>Login</button>
                 : <>
                 <button className='loginBtn'>{props.user.userName}
                 </button><button>Logout</button>
                 </>
             }
+        </div>
+        <div className='nav-menu'>
+            <button id='nav-menuBtn' onClick={handleToggle}>{navbarOpen ? <AiOutlineCloseSquare className='navMenu-icon' /> : <FaBars className='navMenu-icon' />}</button>
             <div className={navbarOpen ? 'nav-menu showMenu' : 'nav-menu'}>
                 <NavLink exact to='/login' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Login</NavLink>
                 <NavLink exact to='/' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Home</NavLink>
