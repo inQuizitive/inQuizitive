@@ -35,6 +35,13 @@ const Leaderboard = () => {
                 
                 return user.results.map((result) => {
                     result.username = user.username;
+                    result.difficulty = result.difficulty
+                        .replace("easy", "Easy")
+                        .replace("medium", "Medium")
+                        .replace("hard", "Hard")
+                    result.quizType = result.quizType
+                        .replace("boolean", "True/False")
+                        .replace("multiple", "Multiple Choice")
                     result.category = result.category
                         .replace(9, 'General Knowledge')
                         .replace(10, 'Entertainment: Books')
@@ -108,8 +115,8 @@ const Leaderboard = () => {
                             onChange={event => { quizTypeFilter(event.target.value) }}>
                             {/* on selection of a quiz type, place the value to the quizTypeFilter state value */}
                             <option value="" selected>Both</option>
-                            <option value="boolean">True/False</option>
-                            <option value="multiple">Multiple Choice</option>
+                            <option value="True/False">True/False</option>
+                            <option value="Multiple Choice">Multiple Choice</option>
                         </select>
                     </th>
                     <th>
@@ -119,9 +126,9 @@ const Leaderboard = () => {
                             onChange={event => { difficultyFilter(event.target.value) }}>
                             {/* on selection of a difficulty, place the value to the difficultyFilter state value */}
                             <option value="" selected>All</option>
-                            <option value="easy">Easy</option>
-                            <option value="medium">Medium</option>
-                            <option value="hard">Hard</option>
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
                         </select>
                     </th>
                     <th>
