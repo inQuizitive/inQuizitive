@@ -10,6 +10,7 @@ const Replacer = (string) => {
   const dash = /&ndash;/g;
   const e1 = /&eacute;/g;
   const o = /&ocirc;/g;
+  const o1 = /&ouml;/g;
   const u = /&uuml;/g;
   const u1 = /&Uuml;/g;
 
@@ -24,6 +25,7 @@ const Replacer = (string) => {
   s = s.replace(dash, "-");
   s = s.replace(e1, "é");
   s = s.replace(o, "ô");
+  s = s.replace(o1, "ö");
   s = s.replace(u, "ü");
   s = s.replace(u1, "Ü");
 
