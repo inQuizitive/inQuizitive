@@ -54,6 +54,20 @@ input[type="password"] {
   margin-bottom: 20px;
 }
 
+a.signup_link {
+  display: flex;
+  font-family: Fira Code;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+a.signup_link:visited {
+  text-decoration: none;
+  color: black;
+}
+
 @media (max-width: 480px) {
   .logInForm {
     width: 50%;
