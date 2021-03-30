@@ -32,10 +32,15 @@ const Leaderboard = () => {
 
     return (
         <div className="leaderboard-wrapper">
+            <div className="leaderboard-title">
+                <h1>Leaderboard</h1>
+            </div>
+            
             <div className="table-wrapper">
                 <table className="leaderboard-table">
                     <th>
                         <h1>Player</h1>
+                        <br></br>
                     </th>
                     <th>
                         <h1>Category</h1>
@@ -63,6 +68,7 @@ const Leaderboard = () => {
                     </th>
                     <th>
                         <h1>Score</h1>
+                        <br></br>
                     </th>
 
                 </table>
