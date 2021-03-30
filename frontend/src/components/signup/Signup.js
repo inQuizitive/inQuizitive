@@ -26,7 +26,7 @@ function SignUp() {
         if (res.status === 200) {
           Swal.fire(
             "Yay!",
-            "Your account has sucessfully been created",
+            "Your account has successfully been created",
             "success"
           );
           sessionStorage.setItem("loggedIn", true);

@@ -17,11 +17,18 @@ import Leaderboard from "./components/leaderboard/Leaderboard";
 import History from "./components/history/History";
 
 function App() {
+
+    const user = { 
+        userName: sessionStorage.getItem("username"),
+        email: sessionStorage.getItem("email"),
+        userId: sessionStorage.getItem("userID")
+    }
+
     return (
         <div className="App">
             <Router>
                 <div className="app-body">
-                    <Navbar />
+                    <Navbar user={user}/>
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route exact path="/login" component={Login} />

@@ -4,24 +4,11 @@
 .nav-container {
   position: relative;
   background-color: rgb(97, 94, 94);
-  height: 15vw;
+  height: 20vw;
+  max-height: 180px;
   width: 100%;
   display: flex;
   align-items: center;
-}
-
-/*? Button display username when logged in or Log in if not */
-.loginBtn {
-  position: fixed;
-  right: 10%;
-  top: 5%;
-  text-transform: uppercase;
-  background-color: var(--logoYellow);
-  
-  padding: 5px;
-  border-radius: 5px;
-  box-shadow: black 1px;
-  
 }
 
 /*? LOGO ADJUSTMENTS  */
@@ -32,6 +19,47 @@
   cursor: pointer;
 }
 
+/*! button that opens/closes the hidden nav menu  */
+.nav-container button {
+  position: fixed;
+  right: 40px;
+  top: 40px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/*! Button display username when logged in or Log in if not */
+.loginBtn {
+  position: inherit;
+  right: 20px;
+  top: 20px;
+  /* text-transform: uppercase; */
+  background-color: var(--logoYellow);
+  opacity:30% ;
+  border: red 2px solid;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  box-shadow: black 1px; 
+}
+
+/*! need to add animation smooth etc  */
+.navMenu-icon {
+
+  border: red 2px solid;
+
+  position: absolute;
+  color: var(--logoBlue);
+  height: 20px;
+  width: 20px;
+  z-index: 99;
+  cursor: pointer;
+  background-color: transparent;
+  right: 0em;
+  top: 0em;
+  padding: 0.2rem 0.2rem;
+}
+
+
 
 .nav-menu.showMenu {
   width: 100%;
@@ -39,7 +67,7 @@
   flex-direction: column;
   text-transform: uppercase;
   padding: 15vh 0 0 50px;
-  padding-left: auto;
+  padding-right: auto;
 }
 
 .nav-menu {
@@ -55,17 +83,4 @@
   overflow: hidden;
   max-width: 290px;
   z-index: 9;
-}
-
-/*! need to add animation smooth etc  */
-.navMenu-icon {
-  position: fixed;
-  color: var(--logoBlue);
-  height: 25px;
-  width: 25px;
-  z-index: 10;
-  cursor: pointer;
-  background-color: transparent;
-  right: 10%;
-  top: 5%;
 }

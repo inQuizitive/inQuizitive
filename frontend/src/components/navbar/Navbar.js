@@ -6,8 +6,7 @@ import Logo from '../../images/logo/InQuizitiveLogo.svg';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineCloseSquare } from 'react-icons/ai';
 
-
-const Navbar = () => {
+const Navbar = (props) => {
 
 const [navbarOpen, setNavbarOpen] = useState(false);
 const handleToggle = () => { setNavbarOpen(prev => !prev) };
@@ -24,8 +23,14 @@ return (
         </div>
         {/* Button shows log in text and takes you to log in page - if logged in it shows username */}
         <div className='nav-menu'>
-            <button className='loginBtn' onClick='/login'>{sessionStorage.getItem("username")}</button>
             <button onClick={handleToggle}>{navbarOpen ? <AiOutlineCloseSquare className='navMenu-icon' /> : <FaBars className='navMenu-icon' />}</button>
+            {!props.user.userName ? 
+                <button className='loginBtn' onClick='/login'>Login</button>
+                : <>
+                <button className='loginBtn'>{props.user.userName}
+                </button><button>Logout</button>
+                </>
+            }
             <div className={navbarOpen ? 'nav-menu showMenu' : 'nav-menu'}>
                 <NavLink exact to='/login' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Login</NavLink>
                 <NavLink exact to='/' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Home</NavLink>
