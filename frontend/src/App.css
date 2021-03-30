@@ -8,6 +8,8 @@
   --logoBlack: #000000;
   --logoWhite: #ffffff;
   --footerColour: #4b4b4b;
+  --button-padding: 0.5rem 0.5rem;
+  
   /*? to use these colours you would say "background-color: var(--logoRed);" */
 }
 

@@ -9,30 +9,39 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 /*? LOGO ADJUSTMENTS  */
 .logo img {
   position: inherit;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 3.4rem;
   height: 10vw;
+  max-height: 120px;
   cursor: pointer;
 }
 
 /*! button that opens/closes the hidden nav menu  */
 .nav-container button {
-  position: fixed;
-  right: 40px;
-  top: 40px;
-  z-index: 10;
-  cursor: pointer;
+  /* position: absolute; */
+  /* right: 10vw; */
+  /* top: 10vw; */
+  /* z-index: 10; */
+  /* cursor: pointer; */
 }
+
+/* .loginStatusBtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
 
 /*! Button display username when logged in or Log in if not */
 .loginBtn {
   position: inherit;
   right: 20px;
   top: 20px;
+
   /* text-transform: uppercase; */
   background-color: var(--logoYellow);
   opacity:30% ;
@@ -43,19 +52,19 @@
 }
 
 /*! need to add animation smooth etc  */
-.navMenu-icon {
+.#nav-menuBtn {
 
   border: red 2px solid;
-
+  overflow: visible;
   position: absolute;
   color: var(--logoBlue);
   height: 20px;
   width: 20px;
-  z-index: 99;
+  z-index: 1;
   cursor: pointer;
   background-color: transparent;
-  right: 0em;
-  top: 0em;
+  right: 0;
+  top: 0;
   padding: 0.2rem 0.2rem;
 }
 
