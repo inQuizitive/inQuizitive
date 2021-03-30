@@ -7,9 +7,12 @@
   --logoBlue: #8dcaff;
   --logoBlack: #000000;
   --logoWhite: #ffffff;
-  --footerColour: #4b4b4b;
+  --footerColour: rgb(97, 94, 94);
   --button-padding: 0.5rem 0.5rem;
-  
+  --button-border-radius: 5px;
+  --logo-opacity: 60%;
+  --button-transition: ease-in-out 0.5s;
+
   /*? to use these colours you would say "background-color: var(--logoRed);" */
 }
 
@@ -32,14 +35,14 @@ span{
 }
 
 ::-webkit-scrollbar {
-  width: 2vh;
+  width: 1vh;
   opacity: 0;
 }
 ::-webkit-scrollbar-track {
   border-radius: 15px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--logoRed);
+  background-color: var(--logoBlue);
   border-radius: 10px;
 }
 

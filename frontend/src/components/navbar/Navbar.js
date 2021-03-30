@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { NavLink } from "react-router-dom"
 import './Navbar.css';
 import Logo from '../../images/logo/InQuizitiveLogo.svg';
-// import MenuBtn from './NavBtn';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineCloseSquare } from 'react-icons/ai';
 
@@ -11,8 +10,6 @@ const Navbar = (props) => {
 const [navbarOpen, setNavbarOpen] = useState(false);
 const handleToggle = () => { setNavbarOpen(prev => !prev) };
 const navbarClosed = () => { setNavbarOpen(false) };
-
-// const status = () => {showUserName(false)};
 
 return (
     <nav className='nav-container'>
@@ -23,10 +20,10 @@ return (
         </div>
         <div className='loginStatusBtns'>
         {!props.user.userName ? 
-                <button className='loginBtn' onClick='/login'>Login</button>
+                <a className='loginBtn' href='/login'>Login</a>
                 : <>
-                <button className='loginBtn'>{props.user.userName}
-                </button><button>Logout</button>
+                <a className='loginBtn' href='/logout'>Log Out
+                </a><button className='userNameBtn'>{props.user.userName}</button>
                 </>
             }
         </div>

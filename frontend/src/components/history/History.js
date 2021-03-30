@@ -9,7 +9,7 @@ import "./History.css"
 // FILTER BY CATEGORY, DIFFICULTY, QUIZ TYPE
 
 const History = () => {
-    return(
+    return (
         <div className="history-page-wrapper">
             <div className="history-title">
                 <h1>User History</h1>
