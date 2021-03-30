@@ -13,6 +13,9 @@ const Replacer = (string) => {
   const o1 = /&ouml;/g;
   const u = /&uuml;/g;
   const u1 = /&Uuml;/g;
+  const pi = /&Pi;/g;
+  const and = /&AMP;/g;
+  const and1 = /&amp;/g;
 
   let s = string.replace(apostrophe, "'");
   s = s.replace(apostrophe1, "'");
@@ -28,6 +31,9 @@ const Replacer = (string) => {
   s = s.replace(o1, "ö");
   s = s.replace(u, "ü");
   s = s.replace(u1, "Ü");
+  s = s.replace(pi, "Π");
+  s = s.replace(and, "&");
+  s = s.replace(and1, "&");
 
   return s;
 };
