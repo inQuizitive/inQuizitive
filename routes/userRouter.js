@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Users = require("../models/schemas/users");
-// const Results = require('../models/schemas/results');
+const Result = require("../models/schemas/quiz")
 const bcrypt = require("bcrypt");
 
 
@@ -127,5 +127,21 @@ router.get("/:id", function (req, res) {
     }
   });
 });
+
+router.post("/leaderboard", (req, res) => {
+  Users.find({}, async (err, users) => {
+    if(err) {
+      console.log(err);
+      res.status(500).json({status: "ERROR", err});
+    }
+    else {
+      const results = await Promise.all(users.map(async (user) => {
+        const results = await Result.find({quizUser: user._id}).exec()
+        return {username: user.username, results}
+      }));
+      res.status(200).json({status: "HAPPY DAYS", results});
+    }
+  })
+})
 
 module.exports = router;
