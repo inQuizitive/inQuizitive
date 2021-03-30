@@ -11,7 +11,7 @@ function Quiz() {
   const [quizEnded, setQuizEnded] = useState(false);
   const [index, setIndex] = useState(0);
   const [timeLeft, setTimeLeft] = useState(30);
-  const [points, setPoints] = useState(0);
+  const [score, setScore] = useState(0);
   const [url, setUrl] = useState("");
   // const [resultsSent, setResultsSent] = useState(false); //! can't find where this is being used for now
   const [category, setCategory] = useState("9");
@@ -49,13 +49,13 @@ function Quiz() {
       getQuestions();
     }
   });
-// the start quiz function is linked from the button below
+  // the start quiz function is linked from the button below
   const startQuiz = (event) => {
     event.preventDefault();
     event.target.style.display = "none";
     setQuizStarted(true);
   };
-// shuffles the array of answers so the correct/incorrect answers are muddled
+  // shuffles the array of answers so the correct/incorrect answers are muddled
   const shuffle = (array) => {
     let shuffledArray = array.sort(() => Math.random() - 0.5);
     return shuffledArray;
@@ -63,9 +63,9 @@ function Quiz() {
 
   const playGame = () => {
     if (index === 10) {
-        // alert('you made it');
-        setQuizStarted(false)
-        setQuizEnded(true);
+      // alert('you made it');
+      setQuizStarted(false)
+      setQuizEnded(true);
       return;
     }
 
@@ -73,16 +73,16 @@ function Quiz() {
       <div className="quizBeingPlayed">
         <div className="quizItems">
           {(questions[index]) ?
-          <Question
-            question={questions[index]}
-            index={index}
-            setIndex={setIndex}
-            points={points}
-            setPoints={setPoints}
-            timeLeft={timeLeft}
-            setTimeLeft={setTimeLeft}
-          />
-          : "" }
+            <Question
+              question={questions[index]}
+              index={index}
+              setIndex={setIndex}
+              points={score}
+              setPoints={setScore}
+              timeLeft={timeLeft}
+              setTimeLeft={setTimeLeft}
+            />
+            : ""}
         </div>
       </div>
     );
@@ -90,35 +90,36 @@ function Quiz() {
 
   return (
     <div className="quizWrapper">
-      {(quizEnded) ? <GameOver 
-            points={points}  
-            difficulty = {difficulty}
-            category = {category}
-            setQuizStarted = {setQuizStarted}
-            quizEnded = {quizEnded}
-             
-          /> :
+      {(quizEnded) ? <GameOver
+        score={score}
+        difficulty={difficulty}
+        category={category}
+        quizType={type}
+        setQuizStarted={setQuizStarted}
+        quizEnded={quizEnded}
+
+      /> :
         <>
           {(quizStarted && !quizEnded) ? playGame() : //quiz started and not quiz ended - run playing game
-          <div className="quizData">
-              <QuizSelection 
-                url = {url}
-                setUrl = {setUrl}
-                difficulty = {difficulty}
-                setDifficulty = {setDifficulty}
-                category = {category}
-                setCategory = {setCategory}
-                setType = {setType}
+            <div className="quizData">
+              <QuizSelection
+                url={url}
+                setUrl={setUrl}
+                difficulty={difficulty}
+                setDifficulty={setDifficulty}
+                category={category}
+                setCategory={setCategory}
+                setType={setType}
               />
               <div className="quiz-start-button">
                 <button id="startQuiz" value="startQuiz" onClick={startQuiz}>
                   Be in<span>Quiz</span>itive!
                 </button>
               </div>
-           </div>
-          } 
+            </div>
+          }
         </>
-      }  
+      }
     </div>
   );
 }

@@ -7,24 +7,31 @@ function GameOver(props) {
 
     let history = useHistory();
 
+
+
+
     const saveResults = async () => {
-        console.log(props)
-        await axios.post('api/results/save', {
-            userID: sessionStorage.getItem('userID'),
-            username: sessionStorage.getItem('username'),
-            points: props.points,
+
+        const data = {
+            quizUser: sessionStorage.getItem('userID'),
+            score: props.score,
             category: props.category,
-            quizType: props.type,
+            quizType: props.quizType,
             difficulty: props.difficulty,
-            quizTakenAt: Date.now()
-        }).then((res) => {
-            if (res.data.status === 'OK') {
+            quizDateTime: new Date()
+        }
+
+        await axios.post('http://localhost:5000/results/save', data).then((res) => {
+            console.log(res.data)
+            if (res.status === 200) {
                 alert("Results added to user history and leaderboard!");
+                console.log("Yes")
             }
             else {
                 alert("Error saving results. Sorry, please try again..");
+                console.log("Nope")
             }
-        }).catch ((err) => {
+        }).catch((err) => {
             console.log(err)
         })
     }
@@ -34,24 +41,24 @@ function GameOver(props) {
         props.setQuizStarted(false);
     }
 
-setTimeout(saveResults, 2500);
+    setTimeout(saveResults, 2500);
 
 
-return (
-    <div className="game-over-container">
-        <div className="game-over-title">
-            <h1 id="go-title">Game Over!</h1>
+    return (
+        <div className="game-over-container">
+            <div className="game-over-title">
+                <h1 id="go-title">Game Over!</h1>
+            </div>
+            <div className="game-over-content">
+                <h2 id="what-score">Your Score was: <span >{props.score}</span>!</h2>
+                <h3 id="press-restart-button">Please press the button below to play again!</h3>
+            </div>
+
+            <div className="restart-quiz-container">
+                <button id="restartQuiz" value="restartQuiz" onClick={restartQuiz}>Play in<span>Quiz</span>itive Again!</button>
+            </div>
         </div>
-        <div className="game-over-content">
-            <h2 id="what-score">Your Score was: <span >{props.points}</span>!</h2>
-            <h3 id="press-restart-button">Please press the button below to play again!</h3>
-        </div>
-        
-        <div className="restart-quiz-container">
-            <button id="restartQuiz" value="restartQuiz" onClick={restartQuiz}>Play in<span>Quiz</span>itive Again!</button>
-        </div>
-    </div>
-)
+    )
 }
 
 export default GameOver;
