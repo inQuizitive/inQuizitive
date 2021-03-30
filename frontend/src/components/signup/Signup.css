@@ -63,6 +63,20 @@ input[type="submit"] {
   background-color: #f8fc74;
 }
 
+a.home-page {
+  display: flex;
+  font-family: Fira Code;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+a.home-page:visited {
+  text-decoration: none;
+  color: black;
+}
+
 @media (max-width: 480px) {
   .signUpForm {
     width: 50%;
