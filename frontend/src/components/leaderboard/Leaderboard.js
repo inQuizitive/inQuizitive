@@ -29,15 +29,15 @@ const Leaderboard = () => {
     // When any of these are changed, onChange our app should display the correct results in response to the change 
 
     const getQuizResults = async () => {
-        await axios.post("players/leaderboard").then((res) => {
+        await axios.post("user/leaderboard").then((res) => {
             setResults(res.data.result.flatMap((user) => {
-                return user.result.map((result) => {
-                    result.quizUser = user.quizUser;
-                    return result
+                return user.results.map((results) => {
+                    results.username = user.username;
+                    return results
                 })
             })
-                .sort((QuizResults, result) => {
-                    return result.quizScore - QuizResults.quizScore
+                .sort((QuizResults, results) => {
+                    return results.quizScore - QuizResults.quizScore
                 }));
         });
     };
@@ -81,9 +81,9 @@ const Leaderboard = () => {
                         <select name="Quiz-Type"
                             onChange={event => { quizTypeFilter(event.target.value) }}>
                             {/* on selection of a quiz type, place the value to the quizTypeFilter state value */}
-                                <option value="" selected>Both</option>
-                                <option value="trueFalse">True/False</option>
-                                <option value="multipleChoice">Multiple Choice</option>
+                            <option value="" selected>Both</option>
+                            <option value="trueFalse">True/False</option>
+                            <option value="multipleChoice">Multiple Choice</option>
                         </select>
                     </th>
                     <th>
@@ -91,11 +91,11 @@ const Leaderboard = () => {
                         <br></br>
                         <select name="Difficulty"
                             onChange={event => { difficultyFilter(event.target.value) }}>
-                                {/* on selection of a difficulty, place the value to the difficultyFilter state value */}
-                                <option value="" selected>All</option>
-                                <option value="easy">Easy</option>
-                                <option value="medium">Medium</option>
-                                <option value="hard">Hard</option>
+                            {/* on selection of a difficulty, place the value to the difficultyFilter state value */}
+                            <option value="" selected>All</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
                         </select>
                     </th>
                     <th>
@@ -104,21 +104,23 @@ const Leaderboard = () => {
                     </th>
 
 
-                    {/* table body to present each result
-                    display a row for each score.
-                    define all the items needed for each column to display in a row. */}
-                    
+                    {/* 
+                    table body to present each result
+                    display a row for each quiz result.
+                    define all the items needed for each column to display in a row. 
+                    */}
+
                     <tbody>
-
-                        <tr className="table-row-item-display">
-
-                            <td className="quiz-username-display" key={playerUsernameID}>{result.quizUser}</td>
-                            <td className="quiz-category-display" key={quizCategoryID}>{result.category}</td>
-                            <td className="quiz-type-display" key={quizTypeID}>{result.type}</td>
-                            <td className="quiz-difficulty-display" key={quizDifficultyID}>{result.difficulty}</td>
-                            <td className="quiz-scores-display" key={quizScoreID}>{result.quizScore}</td>
-
-                        </tr>
+                        {QuizResults.filter((results) => {
+                        }).map((results) => (
+                            <tr className="row-for-each-result">
+                                <td className="row-display-user" key={playerUsernameID}>{results.username}</td>
+                                <td className="row-display-category" key={quizCategoryID}>{results.category}</td>
+                                <td className="row-display-difficulty" key={quizDifficultyID}>{results.difficulty}</td>
+                                <td className="row-display-type" key={quizTypeID}>{results.quizType}</td>
+                                <td className="row-display-score" key={quizScoreID}>{results.score}</td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
