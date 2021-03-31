@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 .nav-container {
@@ -19,77 +18,95 @@
   height: 10vw;
   max-height: 120px;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.logo img:hover {
+  opacity: var(--logo-opacity);
+  transition: 0.5s ease-in-out;
 }
 
-/*! button that opens/closes the hidden nav menu  */
-.nav-container button {
-  /* position: absolute; */
-  /* right: 10vw; */
-  /* top: 10vw; */
-  /* z-index: 10; */
-  /* cursor: pointer; */
-}
-
-/* .loginStatusBtns {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
-
-/*! Button display username when logged in or Log in if not */
-.loginBtn {
-  position: inherit;
-  right: 20px;
-  top: 20px;
-
-  /* text-transform: uppercase; */
-  background-color: var(--logoYellow);
-  opacity:30% ;
-  border: red 2px solid;
-  padding: 0.5rem 0.5rem;
-  border-radius: 5px;
-  box-shadow: black 1px; 
-}
-
-/*! need to add animation smooth etc  */
-.#nav-menuBtn {
-
-  border: red 2px solid;
-  overflow: visible;
-  position: absolute;
-  color: var(--logoBlue);
-  height: 20px;
-  width: 20px;
-  z-index: 1;
+.navMenu-icon {
+  color: white;
+  position: fixed;
+  height: 30px;
+  width: 30px;
+  top: 45px;
+  right: 40px;
   cursor: pointer;
-  background-color: transparent;
-  right: 0;
-  top: 0;
-  padding: 0.2rem 0.2rem;
+  z-index: 10;
+  transition: all 0.5s;
 }
 
-
+.navMenu-icon:hover{
+  transform: rotate(180deg);
+  height: 33px;
+  width: 33px;
+}
 
 .nav-menu.showMenu {
-  width: 100%;
+  width: 40%;
+  height: 100%;
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  padding: 15vh 0 0 50px;
-  padding-right: auto;
+  z-index: 9;
+  transition: all 0.25s ease-in-out 0s;
 }
 
 .nav-menu {
-  overflow-y: scroll;
-  list-style: none;
   position: fixed;
-  top: 0;
+  overflow-y: scroll;
   background: var(--logoRed);
+  top: 0;
   right: 0;
   bottom: 0;
   height: 100vh;
-  width: 0;
+  width: 0%;
+  padding-top: 60px;
+  text-transform: uppercase;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   max-width: 290px;
   z-index: 9;
+  transition: all 1s ease-in-out 0s;
+}
+
+.navMenu-button {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+}
+
+.loginStatusBtns {
+  position: relative;
+  right: 50%;
+  display: flex;
+  flex-direction:column-reverse;
+  background: var(--logoYellow);
+  border-radius: var(--button-border-radius);
+  text-align: center;
+  opacity: 75%;
+  transition: var(--button-transition);
+}
+
+.loginStatusBtns:hover{
+  opacity: 100%;
+  transition: var(--button-transition);
+}
+
+/*? Button display username when logged in or Log in if not */
+.loginBtn {
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  text-decoration: none;
+}
+
+.userNameBtn {
+  background: var(--footerColour);
+  color: white;
+  padding: 5px 5px;
+  border: none;
 }
