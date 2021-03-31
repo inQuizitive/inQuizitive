@@ -70,7 +70,15 @@ a.signup_link:visited {
 
 @media (max-width: 480px) {
   .logInForm {
-    width: 50%;
-    align-content: center;
+    width: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .logIn {
+    display: flex;
+    justify-content: center;
+    margin-right: 30%;
+    align-items: center;
   }
 }

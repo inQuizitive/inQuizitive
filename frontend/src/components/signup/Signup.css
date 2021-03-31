@@ -8,6 +8,7 @@
   font-family: Fira Code;
   background-color: #ec4c4c;
   padding: 5%;
+  width: auto;
   border-radius: 25px;
   margin-left: 30%;
   margin-right: 30%;
@@ -15,6 +16,8 @@
 }
 
 .createHeader {
+  display: flex;
+  justify-content: center;
   font-family: Fira Code;
   font-size: 50px;
   text-align: center;
@@ -22,10 +25,12 @@
 }
 
 .username,
+.emailaddress,
+.createpassword,
 .passwordCheck {
   display: flex;
   color: #f8fc74;
-  font-size: 16pt;
+  font-size: 4vh;
   text-align: center;
 }
 
@@ -60,6 +65,8 @@ input[type="submit"] {
   margin-bottom: 20px;
   height: 50px;
   width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #f8fc74;
 }
 
@@ -78,8 +85,38 @@ a.home-page:visited {
 }
 
 @media (max-width: 480px) {
+  .createAccount {
+    margin-top: 2vh;
+    margin-right: 20%;
+  }
+
+  .createHeader {
+    font-size: 3vh;
+  }
+
   .signUpForm {
+    font-size: 2vh;
+    height: auto;
     width: 50%;
-    align-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .username,
+  .emailaddress,
+  .createpassword,
+  .passwordCheck {
+    display: flex;
+    color: #f8fc74;
+    font-size: 3vh;
+    text-align: center;
+  }
+
+  input[type="username"],
+  input[type="emailaddress"],
+  input[type="createpassword"],
+  input[type="passwordcheck"] {
+    height: 3vh;
+    width: 25vh;
   }
 }
