@@ -144,4 +144,20 @@ router.post("/leaderboard", (req, res) => {
   })
 })
 
+// router.post("/history/", (req, res) => {
+//   Result.find({quizUser: req.body.id}, async (err, results) => {
+//     if(err){
+//       console.log(err);
+//       res.status(500).json({status: "ERROR", err});
+//     }
+//     else if (!results){
+//       res.status(404).json({status: "ERROR", msg: "NO RESULTS FOUND"});
+//     }
+//     else{
+//       const user = await (await Users.findOne({_id: req.body.id})).exec();
+//       res.status(200).json({status: "HAPPY DAYS", results, username: user.username, quizUser: user._id})
+//     }
+//   })
+// })
+
 module.exports = router;
