@@ -1,67 +1,83 @@
-footer{
-    position: relative;
-    width: 100%;
-    min-height: 20vh;
-    bottom: 0;
-    background-color: var(--logoRed);
+footer {
+  position: relative;
+  width: 100%;
+  min-height: 20vh;
+  bottom: 0;
+  background-color: var(--logoRed);
 }
-.footer-title{
-    width: 33.333%;
-    text-align: center;
-    color: white;
+.footer-title {
+  width: 33.333%;
+  text-align: center;
+  color: white;
 }
-.footer-title h3{
-    margin: 0;
-    padding: 0;
-    padding-top: 2.5vh;
-    font-size: 6vh;
+.footer-title h3 {
+  margin: 0;
+  padding: 0;
+  padding-top: 2.5vh;
+  font-size: 6vh;
 }
-.footer-title span{
-    color: black;
+.footer-title span {
+  color: black;
 }
-.footer-content{
-    display: flex;
-    color: black;
+.footer-content {
+  display: flex;
+  color: black;
 }
-.about-us-footer-title{
-    color: black;
+.about-us-footer-title {
+  color: black;
 }
-.footer-content h5{
-    margin: 0;
-    padding: 0;
-    font-size: 3vh;
+.footer-content h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 3vh;
 }
-.footer-content a{
-    font-size: 2.5vh;
+.footer-content a {
+  font-size: 2.5vh;
 }
-.footer-content a:hover{
-    color: black;
+.footer-content a:hover {
+  color: black;
 }
-.about-us-navigation{
-    width: 33.333%;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
+.about-us-navigation {
+  width: 33.333%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
 }
-.about-us-nav{
-    width: 50%;
-    margin: 0;
-    padding-left: 25%;
+.about-us-nav {
+  width: 50%;
+  margin: 0;
+  padding-left: 25%;
 }
-.about-us-title{
-    color: white;
+.about-us-title {
+  color: white;
 }
 .menu a {
-    text-decoration: none;
-    color: white;
-    width: 100%;
-    text-align: center;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  text-align: center;
 }
-.resources-navigation{
-    width: 33.333%;
-    padding-top: 2.5%;
+.resources-navigation {
+  width: 33.333%;
+  padding-top: 2.5%;
 }
-.resources-nav{
-    width: 50%;
-    margin: 0;
-    padding-left: 25%;
+.resources-nav {
+  width: 50%;
+  margin: 0;
+  padding-left: 25%;
+}
+
+@media (min-width: 540px) {
+  .footer-title h3 {
+    font-size: 3vh;
+  }
+  .about-us-footer-title {
+    font-size: 1vh;
+  }
+  .footer-content h5 {
+    font-size: 2vh;
+  }
+
+  .menu a {
+    font-size: 2vh;
+  }
 }
