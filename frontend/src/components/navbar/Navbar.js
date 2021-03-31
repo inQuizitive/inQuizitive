@@ -19,8 +19,10 @@ return (
             </a>
         </div>
         <div className='loginStatusBtns'>
-        {!props.user.userName ? 
+        {!props.user.userName ? <div className='loggedOutNav'>
+                <a className='signUp' href='/signup'>Sign Up</a>
                 <a className='loginBtn' href='/login'>Login</a>
+                </div>
                 : <>
                 <a className='loginBtn' href='/logout'>Log Out
                 </a><button className='userNameBtn'>{props.user.userName}</button>
@@ -30,7 +32,6 @@ return (
         <div className='nav-menu'>
             <button id='nav-menuBtn' onClick={handleToggle}>{navbarOpen ? <AiOutlineCloseSquare className='navMenu-icon' /> : <FaBars className='navMenu-icon' />}</button>
             <div className={navbarOpen ? 'nav-menu showMenu' : 'nav-menu'}>
-                <NavLink exact to='/login' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Login</NavLink>
                 <NavLink exact to='/' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Home</NavLink>
                 <NavLink exact to='/profile' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Profile</NavLink>
                 <NavLink exact to='/leaderboard' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Leaderboard</NavLink>

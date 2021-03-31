@@ -16,7 +16,7 @@
   position: absolute;
   padding: 0.2rem 1rem;
   height: 10vw;
-  top: 5vh;
+  top: 3.5vh;
   left: 1vw;
   max-height: 120px;
   cursor: pointer;
@@ -94,10 +94,7 @@
   transition: var(--button-transition);
 }
 
-.loginStatusBtns:hover{
-  opacity: 100%;
-  transition: var(--button-transition);
-}
+
 
 /*? Button display username when logged in or Log in if not */
 .loginBtn {
@@ -106,6 +103,7 @@
   text-decoration: none;
   background: var(--logoYellow);
   opacity: 75%;
+  margin-left: 5px;
 
 }
 
@@ -116,3 +114,90 @@
   border: none; 
 }
 
+.loggedOutNav {
+  display: flex;
+  flex-direction: row-reverse;
+  size: 2vw;
+  font-weight: 600;
+  justify-content: center;
+  text-align: center;
+  opacity: 75%;
+
+}
+
+.signUp {
+  padding: 8px 10px ;
+  border-radius: var(--button-border-radius);
+  background: var(--logoBlue);
+  text-decoration: none;
+  margin-left: 1vw;
+  transition: all ease-in-out 0.5s;
+}
+
+.signUp:hover{
+  opacity: 100%;
+  transition: var(--button-transition);
+}
+
+@media (max-width: 1025px) {
+  .loggedOutNav {
+    font-size: 1.2rem;
+  }
+
+  .signUp{
+    padding: 5px 15px;
+  }
+  .loginBtn{
+    padding: 5px 15px;
+  }
+}
+
+@media (max-width: 696px) {
+  .loggedOutNav {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .signUp .loginBtn {
+    height: 2vw;
+    padding: 5px 10px;
+  }
+
+  .logo img {
+    top: 2vh;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 415px) {
+  .logo img {
+    min-height: 40px;
+  }
+
+  .loggedOutNav {
+    max-height: 40px;
+    font-size: 1rem;
+  }
+
+  .signUp{
+    padding: 1px 3px;
+    margin-top: 3px;
+  }
+  .loginBtn{
+    padding: 1px 3px;
+  }
+
+  .navMenu-icon{
+    top: 4vh;
+  }
+}
+
+@media (max-width: 321px) {
+
+  .loggedOutNav{
+    font-size: 0.8rem;
+  }
+  .navMenu-icon{
+    height: 2em;
+  }
+}
