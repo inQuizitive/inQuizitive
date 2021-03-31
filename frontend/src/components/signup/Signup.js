@@ -76,7 +76,7 @@ function SignUp() {
           onChange={onChange}
         />
 
-        <label htmlFor="email" className="email">
+        <label htmlFor="email" className="emailaddress">
           Email Address:
         </label>
         <input
@@ -88,7 +88,7 @@ function SignUp() {
           value={email}
         />
 
-        <label htmlFor="password" className="password">
+        <label htmlFor="password" className="createpassword">
           Create Password:
         </label>
         <input
