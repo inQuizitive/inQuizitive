@@ -70,9 +70,9 @@ const Leaderboard = () => {
                     return result;
                 })
             })
-                .sort((QuizResults, results) => {
-                    return results.quizScoreID - QuizResults.quizScoreID
-                }));
+            .sort((QuizResults, results) => {
+                return results.quizScoreID - QuizResults.quizScoreID
+            }));
         });
     };
 
