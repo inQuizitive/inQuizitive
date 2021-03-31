@@ -38,3 +38,13 @@ a.takemehome:visited {
   text-decoration: none;
   color: black;
 }
+
+@media (max-width: 480px) {
+  .pageNotFound {
+    font-size: 6vh;
+  }
+
+  .notExist {
+    font-size: 4vh;
+  }
+}
