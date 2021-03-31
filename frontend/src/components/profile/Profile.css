@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 .profile-container {
-  margin: 0 auto;
+  margin: 5%;
   box-sizing: border-box;
   width: 90vw;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -12,9 +11,17 @@
 
 .H-section-container {
   font-family: fira code;
+  z-index: 2;
+  width: 35vw;
+  height: 17vw;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin: 1%;
+  overflow: hidden;
+  padding-right: 1%;
   border-radius: 0.6em;
   /*shadows*/
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
@@ -23,22 +30,66 @@
 
 #H-section-button {
   font-family: fira code;
-  height: 10%;
-  padding: 0 2% 0 2%;
+  margin-top: 2%;
+  padding: 10px;
   border-radius: 1em;
   background-color: #f8fc74;
   border: none;
+  font-weight: 600;
+  text-align: center;
   cursor: pointer;
+  transition: 0.055s ease-out;
 }
 
-#H-section a {
+.H-section a {
   text-decoration: none;
   color: black;
+}
+
+@media screen and (max-width: 800px) {
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .H-section-container {
+    font-family: fira code;
+    font-size: 12px;
+    width: 40vw;
+    height: 20vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    overflow: hidden;
+    border-radius: 0.6em;
+    /*shadows*/
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    border: solid 2px#EC4C4C;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .profile-container {
     display: flex;
     flex-direction: column;
+  }
+  .H-section-container {
+    font-family: fira code;
+    font-size: 12px;
+    width: 70vw;
+    height: 35vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    overflow: hidden;
+    border-radius: 0.6em;
+    /*shadows*/
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    border: solid 2px#EC4C4C;
   }
 }
