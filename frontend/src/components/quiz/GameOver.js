@@ -45,7 +45,7 @@ function GameOver(props) {
     props.setQuizStarted(false);
   };
 
-  setTimeout(saveResults, 2500);
+  setTimeout(saveResults, 500);
 
   return (
     <div className="game-over-container">
