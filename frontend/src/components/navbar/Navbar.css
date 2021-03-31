@@ -24,7 +24,7 @@
 }
 .logo img:hover {
   opacity: var(--logo-opacity);
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .navMenu-icon {
@@ -36,7 +36,7 @@
   right: 40px;
   cursor: pointer;
   z-index: 10;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 .navMenu-icon:hover{
