@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines":{
+    "node": "14.15.4",
+    "npm": "6.14.10"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bootstrap": "npm install --include=dev && cd frontend && npm install --include=dev",
     "backend": "nodemon index.js",
     "frontend": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
