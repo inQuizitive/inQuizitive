@@ -6,7 +6,9 @@ import './Profile.css'
 function ProfilePage() {
     return (
         <div className="profile-page">
-            <h1>Profile Page</h1>
+            <div className="profile-title">
+                <h1>Profile Page</h1>
+            </div>
             <div className="profile-container">
 
                 <Section heading="User details"

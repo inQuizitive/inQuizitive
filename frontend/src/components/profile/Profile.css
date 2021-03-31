@@ -9,6 +9,12 @@
   text-align: center;
 }
 
+.profile-title {
+  color: var(--logoBlue);
+  text-align: center;
+  font-size: 6vh;
+}
+
 .H-section-container {
   font-family: fira code;
   z-index: 2;
