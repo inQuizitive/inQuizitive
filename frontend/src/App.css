@@ -11,7 +11,7 @@
   --button-padding: 0.5rem 0.5rem;
   --button-border-radius: 5px;
   --logo-opacity: 60%;
-  --button-transition: ease-in-out 0.5s;
+  --button-transition: all ease-in-out 0.5s;
 
   /*? to use these colours you would say "background-color: var(--logoRed);" */
 }

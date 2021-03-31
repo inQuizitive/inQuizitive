@@ -83,12 +83,19 @@
   font-size: 1.5rem;
 }
 
+.nav-menu-button:hover {
+  background: var(--logoYellow);
+}
+.navMenu-selected{
+  background: var(--logoBlue);
+  color: black;
+}
+
 .loginStatusBtns {
   position: relative;
   right: 40%;
   display: flex;
   flex-direction:column-reverse;
-
   border-radius: var(--button-border-radius);
   text-align: center;
   transition: var(--button-transition);
@@ -103,7 +110,7 @@
   text-decoration: none;
   background: var(--logoYellow);
   opacity: 75%;
-  margin-left: 5px;
+  /* margin-left: 5px; */
 
 }
 
@@ -130,14 +137,30 @@
   border-radius: var(--button-border-radius);
   background: var(--logoBlue);
   text-decoration: none;
-  margin-left: 1vw;
+  /* margin-left: 1vw; */
   transition: all ease-in-out 0.5s;
 }
 
 .signUp:hover{
   opacity: 100%;
   transition: var(--button-transition);
+  background: var(--logoRed);
 }
+
+.loginBtn:hover{
+  opacity: 100%;
+  transition: var(--button-transition);
+  background: var(--logoRed);
+}
+
+.loggedOutNav:hover{
+  opacity: 100%;
+  transition: var(--button-transition);
+  background: var(--logoRed);
+}
+
+
+
 
 @media (max-width: 1025px) {
   .loggedOutNav {
