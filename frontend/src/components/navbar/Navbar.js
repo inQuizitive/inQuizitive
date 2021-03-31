@@ -32,6 +32,8 @@ return (
         <div className='nav-menu'>
             <button id='nav-menuBtn' onClick={handleToggle}>{navbarOpen ? <AiOutlineCloseSquare className='navMenu-icon' /> : <FaBars className='navMenu-icon' />}</button>
             <div className={navbarOpen ? 'nav-menu showMenu' : 'nav-menu'}>
+                <NavLink exact to='/signup' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Sign Up</NavLink>
+                <NavLink exact to='/login' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Log In</NavLink>
                 <NavLink exact to='/' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Home</NavLink>
                 <NavLink exact to='/profile' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Profile</NavLink>
                 <NavLink exact to='/leaderboard' className='navMenu-button' activeClassName='navMenu-selected' onClick={navbarClosed}>Leaderboard</NavLink>

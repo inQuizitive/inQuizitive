@@ -83,12 +83,19 @@
   font-size: 1.5rem;
 }
 
+.nav-menu-button:hover {
+  background: var(--logoYellow);
+}
+.navMenu-selected{
+  background: var(--logoBlue);
+  color: black;
+}
+
 .loginStatusBtns {
   position: relative;
   right: 40%;
   display: flex;
   flex-direction:column-reverse;
-
   border-radius: var(--button-border-radius);
   text-align: center;
   transition: var(--button-transition);
