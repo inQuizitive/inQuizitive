@@ -20,3 +20,8 @@
 .no-saved-results a:hover{
     text-decoration: underline;
 }
+.history-table select{
+    border-color: var(--logoRed);
+    border-width: 0.4vh;
+    border-radius: 7.5px;
+}
