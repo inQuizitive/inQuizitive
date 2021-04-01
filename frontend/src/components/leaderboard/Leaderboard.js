@@ -97,18 +97,18 @@ const Leaderboard = () => {
 
             <div className="table-wrapper">
                 <table className="leaderboard-table">
-                    <th>
+                    <th className="display-user">
                         <h1>Player</h1>
                         <br></br>
                     </th>
-                    <th>
+                    <th className="display-category">
                         <h1>Category</h1>
                         <br></br>
                         <input type="text" placeholder="Search..."
                             onChange={event => { categoryFilter(event.target.value)}}>
                         </input>
                     </th>
-                    <th>
+                    <th className="display-type">
                         <h1>Quiz Type</h1>
                         <br></br>
                         <select name="Quiz-Type"
@@ -119,7 +119,7 @@ const Leaderboard = () => {
                             <option value="Multiple Choice">Multiple Choice</option>
                         </select>
                     </th>
-                    <th>
+                    <th className="display-difficulty">
                         <h1>Difficulty</h1>
                         <br></br>
                         <select name="Difficulty"
@@ -131,7 +131,7 @@ const Leaderboard = () => {
                             <option value="Hard">Hard</option>
                         </select>
                     </th>
-                    <th>
+                    <th className="display-score">
                         <h1>Score</h1>
                         <br></br>
                     </th>
@@ -197,11 +197,11 @@ IF WE ADDED THE FUNCTION TO SHOW RESULTS FOR ALL 3 FIRST, THEN WE WOULD NEVER FI
 
                         }).map((results) => (
                             <tr className="row-for-each-result">
-                                <td className="row-display-user" key={playerUsernameID}>{results.username}</td>
-                                <td className="row-display-category" key={quizCategoryID}>{results.category}</td>
-                                <td className="row-display-type" key={quizTypeID}>{results.quizType}</td>
-                                <td className="row-display-difficulty" key={quizDifficultyID}>{results.difficulty}</td>
-                                <td className="row-display-score" key={quizScoreID}>{results.score}</td>
+                                <td className="display-user" key={playerUsernameID}>{results.username}</td>
+                                <td className="display-category" key={quizCategoryID}>{results.category}</td>
+                                <td className="display-type" key={quizTypeID}>{results.quizType}</td>
+                                <td className="display-difficulty" key={quizDifficultyID}>{results.difficulty}</td>
+                                <td className="display-score" key={quizScoreID}>{results.score}</td>
                             </tr>
                         ))}
                     </tbody>
