@@ -146,4 +146,35 @@
         padding: 2.5%;
         margin: 0;
     }
+    h2.q-category {
+        font-size: 20px;
+    }
+    h2.q-difficulty {
+        font-size: 20px;
+    }
+    h2.question {
+        font-size: 18px;
+    }
+    .allAnswers {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        padding-bottom: 4vh;
+    }
+    .each-answer-button button {
+        border: 0;
+        background-color: var(--buttonBlue);
+        color: var(--logoWhite);
+        font-size: 1.6vh;
+        border-radius: 10px;
+        width: 20vh;
+        height: 15vh;
+        padding: 10%;
+    }
+    .each-answer-button button:hover {
+        cursor: pointer;
+        transition: 0.5s;
+        color: var(--logoBlack);
+    }
 }
