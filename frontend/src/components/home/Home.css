@@ -46,6 +46,17 @@
   color: black;
 }
 
+.welcome {
+  font-family: Fira Code;
+  font-size: 50px;
+  text-align: center;
+  color: #8dcaff;
+}
+
+.welcomeone {
+  text-align: center;
+}
+
 @media screen and (max-width: 800px) {
   .home-container {
     display: flex;
@@ -91,5 +102,14 @@
     /*shadows*/
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     border: solid 2px#EC4C4C;
+  }
+  .welcome {
+    font-family: Fira Code;
+    font-size: 4vh;
+  }
+
+  .welcomeone {
+    text-align: center;
+    font-size: 2vh;
   }
 }
