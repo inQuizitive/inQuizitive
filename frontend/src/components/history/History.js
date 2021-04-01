@@ -58,11 +58,11 @@ const History = () => {
 
       <div className="history-table-wrapper">
         <table className="history-table">
-          <th>
+          <th className="display-category">
             <h1>Category</h1>
             <br></br>
           </th>
-          <th>
+          <th className="display-type">
             <h1>Quiz Type</h1>
             <br></br>
             <select
@@ -79,7 +79,7 @@ const History = () => {
               <option value="multiple">Multiple Choice</option>
             </select>
           </th>
-          <th>
+          <th className="display-difficulty">
             <h1>Difficulty</h1>
             <br></br>
             <select
@@ -96,7 +96,7 @@ const History = () => {
               <option value="hard">Hard</option>
             </select>
           </th>
-          <th>
+          <th className="row-display-score">
             <h1>Score</h1>
             <br></br>
           </th>
@@ -195,7 +195,7 @@ const History = () => {
               }
             }).map((results) => (
               <tr className="row-for-each-result">
-                <td className="row-display-category" key={quizCategoryID}>
+                <td className="display-category" key={quizCategoryID}>
                   {results.category
                     .replace(9, "General Knowledge")
                     .replace(10, "Entertainment: Books")
@@ -222,12 +222,12 @@ const History = () => {
                     .replace(31, "Japanese Anime & Manga")
                     .replace(32, "Entertainment: Cartoon & Animations")}
                 </td>
-                <td className="row-display-type" key={quizTypeID}>
+                <td className="display-type" key={quizTypeID}>
                   {results.quizType
                     .replace("boolean", "True/False")
                     .replace("multiple", "Multiple Choice")}
                 </td>
-                <td className="row-display-difficulty" key={quizDifficultyID}>
+                <td className="display-difficulty" key={quizDifficultyID}>
                   {results.difficulty
                     .replace("easy", "Easy")
                     .replace("medium", "Medium")
