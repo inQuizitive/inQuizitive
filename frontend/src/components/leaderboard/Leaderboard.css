@@ -30,3 +30,29 @@
   text-align: center;
   color: #8dcaff;
 }
+
+@media(max-width: 1100px) {
+
+  .display-type{
+display: none;  
+visibility: collapse;
+opacity: 0;
+}
+.display-difficulty{
+  display: none;  
+  visibility: collapse;
+  opacity: 0;
+}
+}
+ 
+@media(max-width: 768px) {
+  
+.display-category{
+  display: none;  
+  visibility: collapse;
+  opacity: 0;
+}
+.display-player{
+  
+}
+}
