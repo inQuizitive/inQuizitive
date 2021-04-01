@@ -10,7 +10,7 @@ This app allows you to create a user, log in, log out and delete your account. Y
 
 
 #### Check Out Our Application!
-###### Please view inQuizitive at ... 
+###### Please view inQuizitive at: https://inquizitive21.herokuapp.com/leaderboard
 ###### Create an account and try out one of our quizzes!
 - Feel free to create an account by signing up and see your score on our leaderboard!
 
