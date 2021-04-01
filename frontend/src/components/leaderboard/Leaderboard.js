@@ -92,11 +92,11 @@ const Leaderboard = () => {
       <h1 className="leaderboard-title">Leaderboard</h1>
       <div className="table-wrapper">
         <table className="leaderboard-table">
-          <th>
+          <th className="display-player">
             <h1>Player</h1>
             <br></br>
           </th>
-          <th>
+          <th className="display-category">
             <h1>Category</h1>
             <br></br>
             <input
@@ -107,7 +107,7 @@ const Leaderboard = () => {
               }}
             ></input>
           </th>
-          <th>
+          <th className='display-type'>
             <h1>Quiz Type</h1>
             <br></br>
             <select
@@ -124,7 +124,7 @@ const Leaderboard = () => {
               <option value="Multiple Choice">Multiple Choice</option>
             </select>
           </th>
-          <th>
+          <th className="display-difficulty">
             <h1>Difficulty</h1>
             <br></br>
             <select
