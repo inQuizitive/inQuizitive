@@ -105,11 +105,8 @@ const History = () => {
             {QuizResults.length ? (
               ""
             ) : (
-              <h2>
-                You Have No Saved Results!
-                <a href="/quiz">
-                  Start in<span>Quiz</span>itive here!
-                </a>
+              <h2 className="no-saved-results">
+                You Have No Saved Results! <a href="/quiz">Start in<span>Quiz</span>itive here!</a>
               </h2>
             )}
 

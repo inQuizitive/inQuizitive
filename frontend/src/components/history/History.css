@@ -13,3 +13,10 @@
     text-align: center;
     border-bottom: 0.5vh solid var(--logoRed);
 }
+.no-saved-results a{
+    text-decoration: none;
+    color: black;
+}
+.no-saved-results a:hover{
+    text-decoration: underline;
+}
