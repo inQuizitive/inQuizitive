@@ -11,5 +11,15 @@
 }
 .leaderboard-table td{
     text-align: center;
-    border-bottom: 0.5vh solid var(--logoRed);
+    border-bottom: 0.3vh solid var(--logoRed);
+}
+.leaderboard-table select{
+    border-color: var(--logoRed);
+    border-width: 0.4vh;
+    border-radius: 7.5px;
+}
+.leaderboard-table input{
+    border-color: var(--logoRed);
+    border-width: 0.4vh;
+    border-radius: 7.5px;
 }
