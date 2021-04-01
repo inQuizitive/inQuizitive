@@ -147,120 +147,78 @@ const Leaderboard = () => {
             <br></br>
           </th>
 
-          <tbody>
-            {/* WE NEED TO FILTER THESE IN AN ORDER TO PRESENT THE CORRECT RESULTS
+                   <tbody>
+                        
+{/* WE NEED TO FILTER THESE IN AN ORDER TO PRESENT THE CORRECT RESULTS
 WE NEED TO ADD THE FILTERS FOR JUST ONE COLUMN FIRST
 THEN 2 COLUMNS
 THEN ALL 3 COLUMNS
 IF WE ADDED THE FUNCTION TO SHOW RESULTS FOR ALL 3 FIRST, THEN WE WOULD NEVER FILTER FOR THE REST */}
 
-            {QuizResults.filter((results) => {
-              // if only searching for type
-              if (
-                results.quizType
-                  .toLowerCase()
-                  .includes(searchType.toLowerCase()) &&
-                !searchDifficulty &&
-                !searchCategory
-              ) {
-                return results;
-              }
-              // if only filtering for difficulty
-              else if (
-                !searchType &&
-                results.difficulty
-                  .toLowerCase()
-                  .includes(searchDifficulty.toLowerCase()) &&
-                !searchCategory
-              ) {
-                return results;
-              }
-              // if filtering for only for category
-              else if (
-                !searchType &&
-                !searchDifficulty &&
-                results.category
-                  .toLowerCase()
-                  .includes(searchCategory.toLowerCase())
-              ) {
-                return results;
-              }
-              // if filtering for both type and difficulty
-              else if (
-                !searchCategory &&
-                results.difficulty
-                  .toLowerCase()
-                  .includes(searchDifficulty.toLowerCase()) &&
-                results.quizType.toLowerCase().includes(searchType.toLowerCase)
-              ) {
-                return results;
-              }
-              // if filtering for both type and category
-              else if (
-                !searchDifficulty &&
-                results.quizType
-                  .toLowerCase()
-                  .includes(searchType.toLowerCase()) &&
-                results.category
-                  .toLowerCase()
-                  .includes(searchCategory.toLowerCase())
-              ) {
-                return results;
-              }
-              // if filtering for both difficulty and category
-              else if (
-                !searchType &&
-                results.category
-                  .toLowerCase()
-                  .includes(searchCategory.toLowerCase()) &&
-                results.difficulty
-                  .toLowerCase()
-                  .includes(searchDifficulty.toLowerCase())
-              ) {
-                return results;
-              }
-              //if filtering for all 3 (difficulty, type, category)
-              else if (
-                results.category
-                  .toLowerCase()
-                  .includes(searchCategory.toLowerCase()) &&
-                results.quizType
-                  .toLowerCase()
-                  .includes(searchType.toLowerCase()) &&
-                results.difficulty
-                  .toLowerCase()
-                  .includes(searchDifficulty.toLowerCase())
-              ) {
-                return results;
-              }
-              //if filtering for none of the columns
-              else if (!searchCategory && !searchDifficulty && !searchType) {
-                return results;
-              }
-            }).map((results) => (
-              <tr className="row-for-each-result">
-                <td className="row-display-user" key={playerUsernameID}>
-                  {results.username}
-                </td>
-                <td className="row-display-category" key={quizCategoryID}>
-                  {results.category}
-                </td>
-                <td className="row-display-type" key={quizTypeID}>
-                  {results.quizType}
-                </td>
-                <td className="row-display-difficulty" key={quizDifficultyID}>
-                  {results.difficulty}
-                </td>
-                <td className="row-display-score" key={quizScoreID}>
-                  {results.score}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-};
+                   {QuizResults.filter((results) => {
+// if only searching for type
+                            if((results.quizType.toLowerCase().includes(searchType.toLowerCase())) 
+                                && !searchDifficulty 
+                                && !searchCategory){
+                                    return results;
+                                }
+// if only filtering for difficulty
+                            else if(!searchType
+                                && (results.difficulty.toLowerCase().includes(searchDifficulty.toLowerCase()))
+                                && !searchCategory) {
+                                    return results;
+                                }
+// if filtering for only for category
+                            else if(!searchType
+                                && !searchDifficulty
+                                && (results.category.toLowerCase().includes(searchCategory.toLowerCase()))) {
+                                    return results;
+                                }
+// if filtering for both type and difficulty
+                            else if (!searchCategory
+                                && results.difficulty.toLowerCase().includes(searchDifficulty.toLowerCase())
+                                && results.quizType.toLowerCase().includes(searchType.toLowerCase)) {
+                                    return results;
+                                }
+// if filtering for both type and category
+                            else if (!searchDifficulty
+                                && results.quizType.toLowerCase().includes(searchType.toLowerCase())
+                                && results.category.toLowerCase().includes(searchCategory.toLowerCase())) {
+                                    return results;
+                                }
+// if filtering for both difficulty and category
+                            else if (!searchType
+                                && results.category.toLowerCase().includes(searchCategory.toLowerCase())
+                                && results.difficulty.toLowerCase().includes(searchDifficulty.toLowerCase())) {
+                                    return results;
+                                }
+//if filtering for all 3 (difficulty, type, category)
+                            else if (results.category.toLowerCase().includes(searchCategory.toLowerCase())
+                                && results.quizType.toLowerCase().includes(searchType.toLowerCase())
+                                && results.difficulty.toLowerCase().includes(searchDifficulty.toLowerCase())) {
+                                    return results;
+                                }
+//if filtering for none of the columns
+                            else if (!searchCategory
+                                && !searchDifficulty
+                                && !searchType) {
+                                    return results;
+                                }
+
+                        }).map((results) => (
+                            <tr className="row-for-each-result">
+                                <td className="display-user" key={playerUsernameID}>{results.username}</td>
+                                <td className="display-category" key={quizCategoryID}>{results.category}</td>
+                                <td className="display-type" key={quizTypeID}>{results.quizType}</td>
+                                <td className="display-difficulty" key={quizDifficultyID}>{results.difficulty}</td>
+                                <td className="display-score" key={quizScoreID}>{results.score}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    )
+}
 
 export default Leaderboard;
