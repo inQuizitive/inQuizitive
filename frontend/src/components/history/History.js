@@ -49,9 +49,7 @@ const History = () => {
 
   return (
     <div className="history-page-wrapper">
-      <div className="history-title">
-        <h1>User History</h1>
-      </div>
+      <h1 className="history-title">User History</h1>
       {/* <div className="history-username-title">
                 <h1>Username: {username}</h1>
             </div> */}
@@ -106,7 +104,10 @@ const History = () => {
               ""
             ) : (
               <h2 className="no-saved-results">
-                You Have No Saved Results! <a href="/quiz">Start in<span>Quiz</span>itive here!</a>
+                You Have No Saved Results!{" "}
+                <a href="/quiz">
+                  Start in<span>Quiz</span>itive here!
+                </a>
               </h2>
             )}
 

@@ -1,25 +1,32 @@
-.leaderboard-wrapper{
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
+.leaderboard-wrapper {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
 }
-.leaderboard-table{
-    margin-left: auto;
-    margin-right: auto;
-    border-spacing: 3.5em 0;
-    border: 0.5vh solid var(--logoRed);
-    border-radius: 10px;
+.leaderboard-table {
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 3.5em 0;
+  border: 0.5vh solid var(--logoRed);
+  border-radius: 10px;
 }
-.leaderboard-table td{
-    text-align: center;
-    border-bottom: 0.3vh solid var(--logoRed);
+.leaderboard-table td {
+  text-align: center;
+  border-bottom: 0.3vh solid var(--logoRed);
 }
-.leaderboard-table select{
-    border-color: var(--logoRed);
-    border-width: 0.4vh;
-    border-radius: 7.5px;
+.leaderboard-table select {
+  border-color: var(--logoRed);
+  border-width: 0.4vh;
+  border-radius: 7.5px;
 }
-.leaderboard-table input{
-    border-color: var(--logoRed);
-    border-width: 0.4vh;
-    border-radius: 7.5px;
+.leaderboard-table input {
+  border-color: var(--logoRed);
+  border-width: 0.4vh;
+  border-radius: 7.5px;
+}
+
+.leaderboard-title {
+  font-family: Fira Code;
+  font-size: 50px;
+  text-align: center;
+  color: #8dcaff;
 }
