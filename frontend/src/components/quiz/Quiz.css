@@ -1,24 +1,28 @@
-.quizData{
+.quizData {
     display: flex;
     height: 70vh;
 }
-.quizSelection{
+
+.quizSelection {
     width: 50%;
     display: grid;
     justify-content: center;
     padding-left: 10%;
 }
-.quizSelection h3{
+
+.quizSelection h3 {
     margin: 0;
     padding: 0 0 2vh 0;
 }
-.quiz-start-button{
+
+.quiz-start-button {
     width: 50%;
     display: flex;
     align-items: center;
 }
-#startQuiz{
-    border-radius: 12px; 
+
+#startQuiz {
+    border-radius: 12px;
     width: auto;
     height: auto;
     background-color: var(--logoWhite);
@@ -27,61 +31,75 @@
     padding: 2.5%;
     margin: 0;
 }
-#startQuiz:hover{
+
+#startQuiz:hover {
     cursor: pointer;
     transition-duration: 0.5s;
     border-width: 0.5vh;
 }
-.dropdown-selection{
+
+.dropdown-selection {
     padding: 2vh 0;
     width: 100%;
 }
-.dropdown-selection h3{
+
+.dropdown-selection h3 {
     font-size: 5vh;
 }
-.dropdown-selection select{
+
+.dropdown-selection select {
     font-size: 4vh;
     border-radius: 15px;
     border-color: var(--buttonBlue);
     border-width: 0.5vh;
 }
-.dropdown-selection select:hover{
+
+.dropdown-selection select:hover {
     cursor: pointer;
 }
-.q-wrapper{
+
+.q-wrapper {
     width: 80%;
     padding: 0 10%;
 }
-.quiz-details{
+
+.quiz-details {
     padding: 5% 0;
 }
-.quiz-details h2{
+
+.quiz-details h2 {
     text-transform: uppercase;
     padding: 0;
     margin: 0;
     font-size: 4vh;
 }
-.q-details{
+
+.q-details {
     padding-bottom: 3vh;
 }
-.q-category{
+
+.q-category {
     text-decoration: underline;
 }
-.question{
+
+.question {
     text-align: center;
     font-size: 5vh;
 }
-.q-difficulty{
+
+.q-difficulty {
     padding-bottom: 2vh;
 }
-.allAnswers{
+
+.allAnswers {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
     padding-bottom: 8vh;
 }
-.each-answer-button button{
+
+.each-answer-button button {
     border: 0;
     background-color: var(--buttonBlue);
     color: var(--logoWhite);
@@ -91,8 +109,41 @@
     height: 25vh;
     padding: 10%;
 }
-.each-answer-button button:hover{
+
+.each-answer-button button:hover {
     cursor: pointer;
     transition: 0.5s;
     color: var(--logoBlack);
+}
+
+@media screen and (max-width: 800px) {
+    .quizData {
+        display: flex;
+        height: 70vh;
+        flex-direction: column;
+    }
+    .dropdown-selection h3 {
+        font-size: 12px;
+    }
+    .dropdown-selection select {
+        font-size: 1.6vh;
+        border-radius: 15px;
+        border-color: var(--buttonBlue);
+        border-width: 0.5vh;
+    }
+    .quiz-start-button {
+        width: 40%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #startQuiz {
+        border-radius: 12px;
+        width: auto;
+        height: auto;
+        background-color: var(--logoWhite);
+        font-weight: 600;
+        font-size: 2vh;
+        padding: 2.5%;
+        margin: 0;
+    }
 }
